@@ -1,3 +1,25 @@
 body {
 	background-color: #f5f9ff;
 }
+
+h1 {
+	font-size: 40px;
+	letter-spacing: -1;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 24px;
+	letter-spacing: -1;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+body {
+	font-size: 16px;
+	line-height: 1.3;
+}

@@ -2,7 +2,7 @@
 	min-width: 400px;
 }
 code {
-	background-color: #fcfcfc;
+	background-color: #fdfdfd;
 	white-space: pre-wrap !important;
 }
 .prism-code {
@@ -28,7 +28,7 @@ code {
 pre {
 	position: relative;
 	border: 1px solid #ccc;
-	background-color: #fcfcfc !important;
+	background-color: #fdfdfd !important;
 }
 
 pre *::selection {
@@ -45,7 +45,7 @@ pre[class*='language-'] {
 	padding: 32px;
 	border-radius: 4px;
 	display: block;
-	background-color: #fcfcfc;
+	background-color: #fdfdfd;
 }
 
 code[class*='language-'] {

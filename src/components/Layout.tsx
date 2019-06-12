@@ -8,22 +8,26 @@ import { Sidebar } from "./Sidebar";
 const wrapper = css`
   margin: 0 auto;
   max-width: 1260px;
-  padding: 0 1.0875rem 1.45rem;
+  padding: 16px 1.0875rem 1.45rem;
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: 160px 1fr;
   grid-gap: 64px;
-  background-color: #f5f9ff;
+
+  & table {
+    width: 100%;
+    table-layout: fixed;
+  }
 
   & a {
     color: #131315;
   }
 
   & th {
-    width: fit-content;
+    width: 184px;
   }
 
-  & th::last-child {
+  & th:last-child {
     width: auto;
   }
 `;

@@ -10,7 +10,6 @@ const style = {
   container: css`
     background: #0056fe;
     color: #3c3b68;
-    margin-bottom: 1.45rem;
   `,
   wrapper: css`
     display: grid;

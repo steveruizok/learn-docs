@@ -9,7 +9,7 @@ type SidebarProps = {
 const list = css`
   line-height: 1.8;
   list-style: none;
-  padding: 0;
+  padding-top: 8px;
   margin: 1.5rem 0 3rem;
   text-align: right;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;

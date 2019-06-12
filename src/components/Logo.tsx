@@ -1,17 +1,5 @@
 import * as React from "react";
-import { css } from "@emotion/core";
-
-const colors = {
-  Primary: "#0056fe",
-  Secondary: "#03afe8",
-  Warn: "#ff4366",
-  Accent: "#feab57",
-  Neutral: "#d9d9ed",
-  Dark: "#3c3b68",
-  Darker: "#131316",
-  Border: "#cbcbdc",
-  Light: "#ffffff"
-};
+import { colors } from "./colors";
 
 export const Logo = () => {
   const flat = false;

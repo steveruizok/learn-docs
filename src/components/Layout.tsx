@@ -1,9 +1,9 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
-import { css } from '@emotion/core'
-import { Header } from './Header'
-import { Sidebar } from './Sidebar'
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
+import { Helmet } from "react-helmet";
+import { css } from "@emotion/core";
+import { Header } from "./Header";
+import { Sidebar } from "./Sidebar";
 
 const wrapper = css`
   margin: 0 auto;
@@ -11,18 +11,13 @@ const wrapper = css`
   padding: 0 1.0875rem 1.45rem;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 160px 1fr;
+  grid-gap: 64px;
+  background-color: #f5f9ff;
 
   & a {
     color: #131315;
   }
-
-  /* & tr {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 20% 20% 50%;
-    text-align: left;
-  } */
 
   & th {
     width: fit-content;
@@ -31,20 +26,20 @@ const wrapper = css`
   & th::last-child {
     width: auto;
   }
-`
+`;
 
 type LayoutProps = {
-  readonly children?: React.ReactNode | ReadonlyArray<React.ReactNode>
-}
+  readonly children?: React.ReactNode | ReadonlyArray<React.ReactNode>;
+};
 
 type RenderData = {
   readonly site: {
     readonly siteMetadata: {
-      readonly title: string
-    }
-  }
-  allMdx: any
-}
+      readonly title: string;
+    };
+  };
+  allMdx: any;
+};
 
 export const Layout = ({ children }: LayoutProps) => (
   <StaticQuery
@@ -55,7 +50,10 @@ export const Layout = ({ children }: LayoutProps) => (
             title
           }
         }
-        allMdx(sort: { order: ASC, fields: [frontmatter___title] }, limit: 2000) {
+        allMdx(
+          sort: { order: ASC, fields: [frontmatter___title] }
+          limit: 2000
+        ) {
           edges {
             node {
               id
@@ -85,12 +83,12 @@ export const Layout = ({ children }: LayoutProps) => (
             defaultTitle={data.site.siteMetadata.title}
             meta={[
               {
-                name: 'description',
-                content: 'Demo site for a Gatsby Starter in TypeScript'
+                name: "description",
+                content: "Demo site for a Gatsby Starter in TypeScript"
               },
               {
-                name: 'keywords',
-                content: 'gatsby, gatsbyjs, sample, demo, typescript'
+                name: "keywords",
+                content: "gatsby, gatsbyjs, sample, demo, typescript"
               }
             ]}
           />
@@ -100,7 +98,7 @@ export const Layout = ({ children }: LayoutProps) => (
             <div>{children}</div>
           </div>
         </>
-      )
+      );
     }}
   />
-)
+);

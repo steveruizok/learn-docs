@@ -1,14 +1,11 @@
 ---
-path: '/content/RowItem/'
-date: '2019-07-01'
-title: 'RowItem'
-tags: ['components']
+path: "/content/RowItem/"
+date: "2019-07-01"
+title: "RowItem"
+tags: ["components"]
 ---
 
-
 A **RowItem** displays text on the left side and an optional component on the right side: a Checkbox, Radio, Switch or Icon.
-
-## Props
 
 | Prop                | Type       | Notes                                           |
 | :------------------ | :--------- | :---------------------------------------------- |
@@ -26,36 +23,36 @@ See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
 ```tsx
 // Overrides
 
-import { Override } from "framer"
+import { Override } from "framer";
 
 export function RadioGroupExample(): Override {
-	return {
-		options: ["Paris", "New York", "London", "Hong Kong"],
-		onValueChange: value => console.log(value),
-	}
+  return {
+    options: ["Paris", "New York", "London", "Hong Kong"],
+    onValueChange: value => console.log(value)
+  };
 }
 ```
 
 ```tsx
 // Code component
 
-import * as React from "react"
-import { Frame } from "framer"
-import { RadioGroup } from "@framer/steveruizok.education/code/RadioGroup"
+import * as React from "react";
+import { Frame } from "framer";
+import { RadioGroup } from "@framer/steveruizok.education/code/RadioGroup";
 
 export const RadioGroupExample = props => {
-	const handleValueChange = (value, valid) => {
-		console.log(value)
-	}
+  const handleValueChange = (value, valid) => {
+    console.log(value);
+  };
 
-	return (
-		<Frame size="100%" background="none">
-			<RadioGroup
-				center
-				options={["Paris", "New York", "London", "Hong Kong"]}
-				onValueChange={handleValueChange}
-			/>
-		</Frame>
-	)
-}
+  return (
+    <Frame size="100%" background="none">
+      <RadioGroup
+        center
+        options={["Paris", "New York", "London", "Hong Kong"]}
+        onValueChange={handleValueChange}
+      />
+    </Frame>
+  );
+};
 ```

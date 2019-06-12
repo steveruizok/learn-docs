@@ -1,14 +1,11 @@
 ---
-path: '/content/Segment/'
-date: '2019-07-01'
-title: 'Segment'
-tags: ['components']
+path: "/content/Segment/"
+date: "2019-07-01"
+title: "Segment"
+tags: ["components"]
 ---
 
-
 A **Segment** is a group of options, presented as buttons. Only one option may be selected at once.
-
-## Props
 
 | Prop                | Type       | Notes                                       |
 | :------------------ | :--------- | :------------------------------------------ |
@@ -25,37 +22,36 @@ See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
 ```tsx
 // Override
 
-import { Override } from "framer"
+import { Override } from "framer";
 
 export function SegmentExample(): Override {
-	return {
+  return {
     options: ["Paris", "New York", "London", "Hong Kong"],
-		onValueChange: value => console.log(value),
-	}
+    onValueChange: value => console.log(value)
+  };
 }
 ```
 
 ```tsx
 // Code component
 
-import * as React from "react"
-import { Frame } from "framer"
-import { Segment } from "@framer/steveruizok.education/code/Segment"
+import * as React from "react";
+import { Frame } from "framer";
+import { Segment } from "@framer/steveruizok.education/code/Segment";
 
 export const SegmentExample = props => {
-	const handleValueChange = (value, valid) => {
-		console.log(value)
-	}
+  const handleValueChange = (value, valid) => {
+    console.log(value);
+  };
 
-	return (
+  return (
     <Frame size="100%" background="none">
-			<Segment 
-        center 
+      <Segment
+        center
         options={["Paris", "New York", "London", "Hong Kong"]}
-        onValueChange={handleValueChange} 
-        />
+        onValueChange={handleValueChange}
+      />
     </Frame>
-	)
-}
+  );
+};
 ```
-

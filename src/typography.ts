@@ -1,31 +1,66 @@
-import Typography from 'typography'
+import Typography from "typography";
 // @ts-ignore
-import parnassusTheme from 'typography-theme-parnassus'
+import parnassusTheme from "typography-theme-parnassus";
 // import gray from 'gray-percentage'
 // import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const typography = new Typography({
   ...parnassusTheme,
-  headerColor: '#131316',
-  bodyColor: '#131316',
-  headerFontFamily: ['Merriweather Sans', 'sans-serif'],
-  bodyFontFamily: ['Merriweather', 'serif'],
+  headerColor: "#3c3b68",
+  bodyColor: "#3c3b68",
+  headerFontFamily: ["Helvetica Neue", "Arial", "serif"],
+  bodyFontFamily: ["Helvetica Neue", "Arial", "serif"],
   baseLineHeight: 2,
   headerWeight: 800,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
-    'h1,h2,h3,h4,h5,h6': {
+    "h1,h2,h3,h4,h5,h6": {
       lineHeight: 1.2
     },
+    h1: {
+      fontSize: "40px",
+      letterSpacing: -1,
+      fontWeight: 600
+    },
+    h2: {
+      fontSize: "24px",
+      fontWeight: 600
+    },
+    h3: {
+      fontSize: "16px",
+      fontWeight: 600
+    },
+    lead: {
+      fontSize: "20px"
+    },
+    body: {
+      fontSize: "16px",
+      lineSpacing: 1.3
+    },
+    link: {
+      fontSize: "16ox",
+      fontWeight: 600
+    },
+    label: {
+      fontSize: "13px",
+      letterSpacing: 0.5,
+      lineSpacing: 1.2,
+      fontWeight: 600,
+      textTransform: "uppercase"
+    },
+    caption: {
+      fontSize: "12px",
+      fontWeight: 500
+    },
     p: {
-      fontSize: '16px',
+      fontSize: "16px",
       lineHeight: 2
     },
     td: {
-      fontSize: '16px',
+      fontSize: "16px",
       lineHeight: 2
     }
   })
-})
+});
 
 // const typography = new Typography({
 //   baseFontSize: '20px',
@@ -79,4 +114,4 @@ const typography = new Typography({
 //   })
 // })
 
-export default typography
+export default typography;

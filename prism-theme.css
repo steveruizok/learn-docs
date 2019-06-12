@@ -1,116 +1,116 @@
 .component-wrapper {
-  min-width: 400px;
+	min-width: 400px;
 }
 code {
-  background-color: #fcfcfc;
-  white-space: pre-wrap !important;
+	background-color: #fcfcfc;
+	white-space: pre-wrap !important;
 }
 .prism-code {
-  width: 100%;
+	width: 100%;
 }
 .brace.curly ~ .assignment,
 .meta.delimiter.method.period.coffee + span {
-  color: #0bf;
+	color: #0bf;
 }
 .embedded .meta.brace.round + span,
 .embedded .brace.curly ~ .assignment,
 .embedded .meta.brace.round + span,
 .embedded .meta.delimiter.method.period.coffee + span {
-  color: #75de00;
+	color: #75de00;
 }
 .embedded .meta.delimiter.method.period.coffee + span.component {
-  border-bottom: none;
+	border-bottom: none;
 }
 .embedded .meta.delimiter.method.period.coffee + span.component.vertical > * {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 
 pre {
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fcfcfc !important;
+	position: relative;
+	border: 1px solid #ccc;
+	background-color: #fcfcfc !important;
 }
 
 pre *::selection {
-  background: rgba(0, 0, 0, 0.1) !important;
-  color: inherit;
+	background: rgba(0, 0, 0, 0.1) !important;
+	color: inherit;
 }
 
 pre code span {
-  line-height: 1.6;
+	line-height: 1.6;
 }
 
 pre[class*='language-'] {
-  border: 1px solid #ccc;
-  padding: 32px;
-  border-radius: 4px;
-  display: block;
-  background-color: #fcfcfc;
+	border: 1px solid #ccc;
+	padding: 32px;
+	border-radius: 4px;
+	display: block;
+	background-color: #fcfcfc;
 }
 
 code[class*='language-'] {
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  font-family: Roboto Mono, monospace;
-  font-size: 15px;
-  font-weight: 400;
-  color: #666;
-  border: 1px solid #ccc;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	font-family: Roboto Mono, monospace;
+	font-size: 15px;
+	font-weight: 400;
+	color: #3c3b68;
+	border: 1px solid #ccc;
 }
 
 pre code[class*='language-'] {
-  border: none;
+	border: none;
 }
 
 table code[class*='language-']::before {
-  content: '';
+	content: '';
 }
 
 table code[class*='language-']::after {
-  content: '';
+	content: '';
 }
 
 table code[class*='language-'] {
-  font-family: Roboto Mono, monospace;
-  font-weight: 600;
-  font-size: 15px;
-  border-radius: 4px;
-  padding: 2px 4px;
+	font-family: Roboto Mono, monospace;
+	font-weight: 600;
+	font-size: 15px;
+	border-radius: 4px;
+	padding: 2px 4px;
 }
 
 p code,
 div > code,
 table > code,
 li > code {
-  font-family: Roboto Mono, monospace;
-  font-weight: 600;
-  font-size: 15px;
-  border-radius: 4px;
-  padding: 2px 4px;
+	font-family: Roboto Mono, monospace;
+	font-weight: 600;
+	font-size: 15px;
+	border-radius: 4px;
+	padding: 2px 4px;
 }
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #666;
+	color: #666;
 }
 .token.tag.punctuation,
 .token.punctuation {
-  color: #666;
+	color: #666;
 }
 .namespace {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 .token.property,
 .token.tag > .token.tag,
@@ -120,22 +120,22 @@ li > code {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #ff8800;
+	color: #ff8800;
 }
 .token.function,
 .token.class-name {
-  color: #ff8800;
+	color: #ff8800;
 }
 .token.attr-name,
 .token.number,
 .token.keyword {
-  color: #33aaee;
+	color: #33aaee;
 }
 .token.number {
-  color: #f97;
+	color: #f97;
 }
 .token.constant {
-  color: #00bbcc;
+	color: #00bbcc;
 }
 .token.attr-value,
 .token.selector,
@@ -143,36 +143,36 @@ li > code {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #8855ff;
+	color: #8855ff;
 }
 .token.operator {
-  color: #999;
+	color: #999;
 }
 .token.entity,
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #444;
+	color: #3c3b68;
 }
 .token.atrule,
 .token.keyword {
-  color: #0bf;
+	color: #0bf;
 }
 .token.regex,
 .token.important,
 .token.variable {
-  color: #444;
+	color: #3c3b68;
 }
 .token.important,
 .token.bold {
-  font-weight: 500;
+	font-weight: 500;
 }
 .token.italic {
-  font-style: italic;
+	font-style: italic;
 }
 .token.entity {
-  cursor: help;
+	cursor: help;
 }
 .has-highlight-line .line:not(.highlight-line) {
-  opacity: 0.25;
+	opacity: 0.25;
 }

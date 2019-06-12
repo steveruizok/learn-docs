@@ -7,8 +7,6 @@ tags: ["components"]
 
 A **Button** can display either text or an icon. It can be tapped and will run an `onTap` callback when tapped. It may optionally be toggled with each tap.
 
-## Props
-
 | Prop           | Type       | Notes                                                                   |
 | :------------- | :--------- | :---------------------------------------------------------------------- |
 | **`text`**     | `string`   |                                                                         |
@@ -41,96 +39,96 @@ The Button's `icon` prop can accept either `“none”` (for no icon) or one of 
 ```tsx
 // Overrides
 
-import { Override } from "framer"
+import { Override } from "framer";
 
 export function ButtonExample(): Override {
-	return {
-		onTap: () => console.log("Tapped!"),
-	}
+  return {
+    onTap: () => console.log("Tapped!")
+  };
 }
 ```
 
 ```tsx
 // Overrides (with toggle)
 
-import { Override } from "framer"
+import { Override } from "framer";
 
 export const OnOffButton: Override = props => {
-	return {
-		toggle: true,
-		onTap: toggled => {
-			if (toggled) {
-				console.log("Toggled on!")
-			} else {
-				console.log("Toggled off!")
-			}
-		},
-	}
-}
+  return {
+    toggle: true,
+    onTap: toggled => {
+      if (toggled) {
+        console.log("Toggled on!");
+      } else {
+        console.log("Toggled off!");
+      }
+    }
+  };
+};
 ```
 
 ```tsx
 // Code component
 
-import * as React from "react"
-import { Stack, Frame } from "framer"
-import { Button } from "@framer/steveruizok.education/code"
+import * as React from "react";
+import { Stack, Frame } from "framer";
+import { Button } from "@framer/steveruizok.education/code";
 
 export const ButtonTest = props => {
-	const handleContinue = () => {
-		console.log("Continuing...")
-	}
+  const handleContinue = () => {
+    console.log("Continuing...");
+  };
 
-	const handleCancel = () => {
-		console.log("Cancelling...")
-	}
+  const handleCancel = () => {
+    console.log("Cancelling...");
+  };
 
-	return (
-		<Stack width="100%" height="100%" direction="vertical">
-			<Button
-				width="100%"
-				type="primary"
-				text="Continue"
-				onTap={handleContinue}
-			/>
-			<Button
-				width="100%"
-				type="secondary"
-				text="Cancel"
-				onTap={handleCancel}
-			/>
-		</Stack>
-	)
-}
+  return (
+    <Stack width="100%" height="100%" direction="vertical">
+      <Button
+        width="100%"
+        type="primary"
+        text="Continue"
+        onTap={handleContinue}
+      />
+      <Button
+        width="100%"
+        type="secondary"
+        text="Cancel"
+        onTap={handleCancel}
+      />
+    </Stack>
+  );
+};
 ```
 
 ```tsx
 // Code component (with toggle)
 
-import * as React from "react"
-import { Stack, Frame } from "framer"
-import { Button } from "@framer/steveruizok.education/code"
+import * as React from "react";
+import { Stack, Frame } from "framer";
+import { Button } from "@framer/steveruizok.education/code";
 
 export const ButtonTest = props => {
-	const [state, setState] = React.useState({
-		toggled: true,
-	})
+  const [state, setState] = React.useState({
+    toggled: true
+  });
 
-	const handleTap = isToggled => {
-		setState({ toggled: isToggled })
-	}
+  const handleTap = isToggled => {
+    setState({ toggled: isToggled });
+  };
 
-	return (
-		<Stack width="100%" height="100%" direction="vertical">
-			<Button
-				width="100%"
-				type="primary"
-				text="Toggle"
-				toggle={true}
-				toggled={state.toggled}
-				onTap={handleTap}
-			/>
-		</Stack>
-	)
-}
+  return (
+    <Stack width="100%" height="100%" direction="vertical">
+      <Button
+        width="100%"
+        type="primary"
+        text="Toggle"
+        toggle={true}
+        toggled={state.toggled}
+        onTap={handleTap}
+      />
+    </Stack>
+  );
+};
 ```

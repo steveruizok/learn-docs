@@ -1,12 +1,11 @@
 ---
-path: '/content/Checkbox/'
-date: '2019-07-01'
-title: 'Checkbox'
-tags: ['components']
+path: "/content/Checkbox/"
+date: "2019-07-01"
+title: "Checkbox"
+tags: ["components"]
 ---
-Tapping on a **Checkbox** will toggled it between on or off.
 
-## Props
+Tapping on a **Checkbox** will toggled it between on or off.
 
 | Prop                | Type       | Notes                                           |
 | :------------------ | :--------- | :---------------------------------------------- |
@@ -20,29 +19,29 @@ See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
 ## Examples
 
 ```tsx
-import { Override } from "framer"
+import { Override } from "framer";
 
 export function CheckboxExample(): Override {
-	return {
-		onValueChange: value => console.log("Value: " + value),
-	}
+  return {
+    onValueChange: value => console.log("Value: " + value)
+  };
 }
 ```
 
 ```tsx
-import * as React from "react"
-import { Frame } from "framer"
-import { Checkbox } from "@framer/steveruizok.education/code"
+import * as React from "react";
+import { Frame } from "framer";
+import { Checkbox } from "@framer/steveruizok.education/code";
 
 export const CheckboxExample = props => {
-	const handleValueChange = (value, valid) => {
-		console.log(`Checked: ${value}`)
-	}
+  const handleValueChange = (value, valid) => {
+    console.log(`Checked: ${value}`);
+  };
 
-	return (
-		<Frame size="100%" background="none">
-			<Checkbox center onValueChange={handleValueChange} />
-		</Frame>
-	)
-}
+  return (
+    <Frame size="100%" background="none">
+      <Checkbox center onValueChange={handleValueChange} />
+    </Frame>
+  );
+};
 ```

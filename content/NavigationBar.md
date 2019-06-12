@@ -1,13 +1,11 @@
 ---
-path: '/content/NavigationBar/'
-date: '2019-07-01'
-title: 'NavigationBar'
-tags: ['components']
+path: "/content/NavigationBar/"
+date: "2019-07-01"
+title: "NavigationBar"
+tags: ["components"]
 ---
 
 A **NavigationBar** models the top navigation bar of an iOS app. The bar has a title, an optional subtitle, and two tappable areas on its left and right sides. Each of these areas may have a link, icon or both. The bar has a taller “large” mode that sits the title below the bar.
-
-## Props
 
 | Prop             | Type       | Notes                         |
 | :--------------- | :--------- | :---------------------------- |
@@ -49,24 +47,24 @@ export function NavigationBarExample(): Override {
 ```tsx
 // Code Component
 
-import * as React from "react"
-import { Frame } from "framer"
-import { NavigationBar } from "@framer/steveruizok.education/code/NavigationBar"
+import * as React from "react";
+import { Frame } from "framer";
+import { NavigationBar } from "@framer/steveruizok.education/code/NavigationBar";
 
 export const RadioExample = props => {
-	return (
-		<Frame size="100%" background="none">
-			<NavigationBar
-				title="Home"
-				leftLink="Back"
-				leftIcon="chevron_left"
-				onLeftTap={() => console.log("Tapped left!")}
-				rightLink={null}
-				rightIcon="edit"
-				onRightTap={() => console.log("Tapped right!")}
-				large={false}
-			/>
-		</Frame>
-	)
-}
+  return (
+    <Frame size="100%" background="none">
+      <NavigationBar
+        title="Home"
+        leftLink="Back"
+        leftIcon="chevron_left"
+        onLeftTap={() => console.log("Tapped left!")}
+        rightLink={null}
+        rightIcon="edit"
+        onRightTap={() => console.log("Tapped right!")}
+        large={false}
+      />
+    </Frame>
+  );
+};
 ```

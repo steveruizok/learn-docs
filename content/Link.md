@@ -1,14 +1,11 @@
 ---
-path: '/content/Link/'
-date: '2019-07-01'
-title: 'Link'
-tags: ['components']
+path: "/content/Link/"
+date: "2019-07-01"
+title: "Link"
+tags: ["components"]
 ---
 
-
 A **Link** displays either text or an icon. It can be tapped and will run an `onTap` callback when tapped.
-
-## Props
 
 | Prop           | Type       | Notes                                                                                      |
 | :------------- | :--------- | :----------------------------------------------------------------------------------------- |
@@ -94,19 +91,19 @@ export function LinkExample(): Override {
 ```tsx
 // Code component
 
-import * as React from "react"
-import { Frame } from "framer"
-import { Link } from "@framer/steveruizok.education/code/Link"
+import * as React from "react";
+import { Frame } from "framer";
+import { Link } from "@framer/steveruizok.education/code/Link";
 
 export const LinkExample = props => {
-	const handleTap = () => {
-		console.log("Tapped!")
-	}
+  const handleTap = () => {
+    console.log("Tapped!");
+  };
 
-	return (
-		<Frame size="100%" background="none">
-			<Link center type="primary" onTap={handleTap} />
-		</Frame>
-	)
-}
+  return (
+    <Frame size="100%" background="none">
+      <Link center type="primary" onTap={handleTap} />
+    </Frame>
+  );
+};
 ```

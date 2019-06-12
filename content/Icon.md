@@ -1,14 +1,11 @@
 ---
-path: '/content/Icon/'
-date: '2019-07-01'
-title: 'Icon'
-tags: ['components']
+path: "/content/Icon/"
+date: "2019-07-01"
+title: "Icon"
+tags: ["components"]
 ---
 
-
 An **Icon** displays a Material Design Icon.
-
-## Props
 
 | Prop        | Type     | Notes                                          |
 | :---------- | :------- | :--------------------------------------------- |
@@ -25,30 +22,30 @@ The `icon` prop can accept either `“none”` or one of the Material Design Ico
 ```tsx
 // Overrides
 
-import { Override } from "framer"
-import { colors } from "@framer/steveruizok.education/code"
+import { Override } from "framer";
+import { colors } from "@framer/steveruizok.education/code";
 
 export function IconExample(): Override {
-	return {
-		color: colors.Primary,
-		icon: "accessible",
-		size: 24,
-	}
+  return {
+    color: colors.Primary,
+    icon: "accessible",
+    size: 24
+  };
 }
 ```
 
 ```tsx
 // Code component
 
-import * as React from "react"
-import { Frame } from "framer"
-import { colors, Icon } from "@framer/steveruizok.education/code"
+import * as React from "react";
+import { Frame } from "framer";
+import { colors, Icon } from "@framer/steveruizok.education/code";
 
 export const IconExample = props => {
-	return (
-		<Frame size="100%" background="none">
-			<Icon center color={colors.Primary} icon="accessible" size={24} />
-		</Frame>
-	)
-}
+  return (
+    <Frame size="100%" background="none">
+      <Icon center color={colors.Primary} icon="accessible" size={24} />
+    </Frame>
+  );
+};
 ```

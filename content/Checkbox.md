@@ -7,12 +7,13 @@ tags: ["components"]
 
 Tapping on a **Checkbox** will toggled it between on or off.
 
-| Prop                | Type       | Notes                                           |
-| :------------------ | :--------- | :---------------------------------------------- |
-| **`value`**         | `boolean`  | Whether the Checkbox is checked.                |
-| **`disabled`**      | `boolean`  |                                                 |
-| **`validation`**    | `function` | A callback that returns `true` or `false`.      |
-| **`onValueChange`** | `function` | The callback to fire when checked or unchecked. |
+| Prop                | Type       | Notes                                             |
+| :------------------ | :--------- | :------------------------------------------------ |
+| **`value`**         | `boolean`  | Whether the Checkbox is checked.                  |
+| **`disabled`**      | `boolean`  |                                                   |
+| **`required`**      | `boolean`  | Whether to be invalid when no option is selected. |
+| **`validation`**    | `function` | A callback that returns `true` or `false`.        |
+| **`onValueChange`** | `function` | The callback to fire when checked or unchecked.   |
 
 See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section for more on how inputs work in Learn.
 

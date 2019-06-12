@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { css } from "@emotion/core";
 import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
+import { colors } from "./colors";
 
 const wrapper = css`
   margin: 0 auto;
@@ -14,21 +15,55 @@ const wrapper = css`
   grid-template-columns: 160px 1fr;
   grid-gap: 64px;
 
-  & table {
-    width: 100%;
-    table-layout: fixed;
-  }
-
   & a {
     color: #131315;
   }
 
+  & thead {
+    color: ${colors.Dark};
+    background-color: ${colors.Neutral};
+  }
+
   & th {
-    width: 184px;
+    width: 156px;
+    padding: 0.5 1em;
+  }
+
+  & th:first-child {
+    padding-left: 1em;
   }
 
   & th:last-child {
+    padding-right: 0em;
     width: auto;
+  }
+
+  tbody {
+    border-spacing: 1px;
+  }
+
+  & td:first-child {
+    padding-left: 1em;
+  }
+
+  & td {
+    vertical-align: top;
+    padding: 0.5 1em;
+    border-bottom: 1px solid ${colors.Border};
+  }
+
+  & tr:last-child td {
+    border-bottom: none;
+  }
+
+  & table {
+    border-spacing: 0px;
+    border-collapse: separate;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    padding: 0;
+    border: 1px solid ${colors.Border};
+    width: 100%;
   }
 `;
 

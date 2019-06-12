@@ -5,15 +5,16 @@ title: "CheckboxGroup"
 tags: ["components"]
 ---
 
-A **CheckboxGroup** takes a set of options and turns them into a set of [RowItem](https://github.com/framer/framer-education/wiki/RowItem)s, each of which displays the option together with a [Checkbox](https://github.com/framer/framer-education/wiki/Checkbox). The CheckboxGroup’s value is an array containing all checked options.
+A **CheckboxGroup** takes a set of options and turns them into a set of [RowItem](http://localhost:8000/content/RowItem)s, each of which displays the option together with a [Checkbox](http://localhost:8000/content/Checkbox). The CheckboxGroup’s value is an array containing all checked options.
 
-| Prop                | Type       | Notes                                           |
-| :------------------ | :--------- | :---------------------------------------------- |
-| **`options`**       | `string[]` | The group’s options.                            |
-| **`value`**         | `string[]` | Which options have been checked.                |
-| **`disabled`**      | `boolean`  |                                                 |
-| **`validation`**    | `function` | A callback that returns `true` or `false`.      |
-| **`onValueChange`** | `function` | The callback to fire when checked or unchecked. |
+| Prop                | Type       | Notes                                             |
+| :------------------ | :--------- | :------------------------------------------------ |
+| **`options`**       | `string[]` | The group’s options.                              |
+| **`value`**         | `string[]` | Which options have been checked.                  |
+| **`disabled`**      | `boolean`  |                                                   |
+| **`required`**      | `boolean`  | Whether to be invalid when no option is selected. |
+| **`validation`**    | `function` | A callback that returns `true` or `false`.        |
+| **`onValueChange`** | `function` | The callback to fire when checked or unchecked.   |
 
 See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section for more on how inputs work in Learn.
 

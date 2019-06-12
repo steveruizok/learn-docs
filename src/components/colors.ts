@@ -7,5 +7,7 @@ export const colors = {
   Dark: "#3c3b68",
   Darker: "#131316",
   Border: "#cbcbdc",
-  Light: "#ffffff"
+  Light: "#ffffff",
+  Shadow: "#e2e6ec",
+  Active: "#cbcbdc"
 };

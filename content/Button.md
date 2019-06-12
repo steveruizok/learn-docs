@@ -5,7 +5,8 @@ title: "Button"
 tags: ["components"]
 ---
 
-A **Button** can display either text or an icon. It can be tapped and will run an `onTap` callback when tapped. It may optionally be toggled with each tap.
+A **Button** can display either text or an icon. It can be tapped and will run
+an `onTap` callback when tapped. It may optionally be toggled with each tap.
 
 | Prop           | Type       | Notes                                                                   |
 | :------------- | :--------- | :---------------------------------------------------------------------- |
@@ -32,7 +33,10 @@ Button’s `type` prop can accept one of the following types:
 
 ### Icon
 
-The Button's `icon` prop can accept either `“none”` (for no icon) or one of the Material Design Icon names from the list of [Icon Names](https://github.com/framer/framer-education/wiki/Icon Names). Setting an icon will hide the Button’s text. The default value is `"none"`.
+The Button's `icon` prop can accept either `“none”` (for no icon) or one of the
+Material Design Icon names from the list of [Icon
+Names](https://github.com/framer/framer-education/wiki/Icon Names). Setting an
+icon will hide the Button’s text. The default value is `"none"`.
 
 ## Examples
 

@@ -5,18 +5,22 @@ title: "CheckboxGroup"
 tags: ["components"]
 ---
 
-A **CheckboxGroup** takes a set of options and turns them into a set of [RowItem](http://localhost:8000/content/RowItem)s, each of which displays the option together with a [Checkbox](http://localhost:8000/content/Checkbox). The CheckboxGroup’s value is an array containing all checked options.
+A **CheckboxGroup** takes a set of options and turns them into a set of
+[RowItem](http://localhost:8000/content/RowItem)s, each of which displays the
+option together with a [Checkbox](http://localhost:8000/content/Checkbox). The
+CheckboxGroup’s value is an array containing all checked options.
 
 | Prop                | Type       | Notes                                             |
 | :------------------ | :--------- | :------------------------------------------------ |
-| **`options`**       | `string[]` | The group’s options.                              |
-| **`value`**         | `string[]` | Which options have been checked.                  |
-| **`disabled`**      | `boolean`  |                                                   |
+| **`options`**       | `string[]` | The input's options.                              |
+| **`value`**         | `string`   | The input's selected option.                      |
 | **`required`**      | `boolean`  | Whether to be invalid when no option is selected. |
-| **`validation`**    | `function` | A callback that returns `true` or `false`.        |
-| **`onValueChange`** | `function` | The callback to fire when checked or unchecked.   |
+| **`disabled`**      | `boolean`  |                                                   |
+| **`validation`**    | `function` |                                                   |
+| **`onValueChange`** | `function` |                                                   |
 
-See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section for more on how inputs work in Learn.
+See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
+for more on how inputs work in Learn.
 
 ## Examples
 

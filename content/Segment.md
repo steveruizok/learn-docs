@@ -5,17 +5,19 @@ title: "Segment"
 tags: ["components"]
 ---
 
-A **Segment** is a group of options, presented as buttons. Only one option may be selected at once.
+A **Segment** is a group of options, presented as buttons. Only one option may
+be selected at once.
 
 | Prop                | Type       | Notes                                       |
 | :------------------ | :--------- | :------------------------------------------ |
-| **`value`**         | `string`   | The selected option.                        |
-| **`options`**       | `string`[] | The Segment’s options.                      |
+| **`options`**       | `string`[] | The input's options.                        |
+| **`value`**         | `string`   | The input's selected option.                |
 | **`disabled`**      | `boolean`  |                                             |
-| **`validation`**    | `function` | A callback that returns `true` or `false`.  |
+| **`validation`**    | `function` |                                             |
 | **`onValueChange`** | `function` | The callback to fire when turned on or off. |
 
-See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section for more on how inputs work in Learn.
+See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
+for more on how inputs work in Learn.
 
 ## Examples
 

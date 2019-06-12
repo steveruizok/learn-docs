@@ -5,17 +5,23 @@ title: "RadioGroup"
 tags: ["components"]
 ---
 
-A **RadioGroup** takes a set of options and turns them into a set of [RowItem](https://github.com/framer/framer-education/wiki/RowItem)s, each of which displays the option together with a [Radio](https://github.com/framer/framer-education/wiki/Radio). The RadioGroup’s value is the currently selected option.
+A **RadioGroup** takes a set of options and turns them into a set of
+[RowItem](https://github.com/framer/framer-education/wiki/RowItem)s, each of
+which displays the option together with a
+[Radio](https://github.com/framer/framer-education/wiki/Radio). The RadioGroup’s
+value is the currently selected option.
 
-| Prop                | Type       | Notes                                           |
-| :------------------ | :--------- | :---------------------------------------------- |
-| **`options`**       | `string[]` | The group’s options.                            |
-| **`value`**         | `string`   | The currently selected option, if any.          |
-| **`disabled`**      | `boolean`  |                                                 |
-| **`validation`**    | `function` | A callback that returns `true` or `false`.      |
-| **`onValueChange`** | `function` | The callback to fire when checked or unchecked. |
+| Prop                | Type       | Notes                                             |
+| :------------------ | :--------- | :------------------------------------------------ |
+| **`options`**       | `string[]` | The group’s options.                              |
+| **`value`**         | `string`   | The currently selected option, if any.            |
+| **`required`**      | `boolean`  | Whether to be invalid when no option is selected. |
+| **`disabled`**      | `boolean`  |                                                   |
+| **`validation`**    | `function` |                                                   |
+| **`onValueChange`** | `function` |                                                   |
 
-See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section for more on how inputs work in Learn.
+See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
+for more on how inputs work in Learn.
 
 ## Examples
 

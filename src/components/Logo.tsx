@@ -16,8 +16,8 @@ export const Logo = () => {
           id="idsKMxYfO70g124009"
           gradientTransform="rotate(45, 0.5, 0.5)"
         >
-          <stop offset="0" stop-color={colors.Primary} stop-opacity="1" />
-          <stop offset="1" stop-color={colors.Secondary} stop-opacity="1" />
+          <stop offset="0" stopColor={colors.Primary} stopOpacity="1" />
+          <stop offset="1" stopColor={colors.Secondary} stopOpacity="1" />
         </linearGradient>
       </defs>
       <circle
@@ -25,7 +25,7 @@ export const Logo = () => {
         cy={25}
         r={23.5}
         fill={flat ? "none" : colors.Light}
-        stroke-width="3"
+        strokeWidth="3"
         stroke="url(#idsKMxYfO70g124009)"
       />
       <g transform="translate(9.834 10.212)">

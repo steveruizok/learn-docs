@@ -5,16 +5,20 @@ title: "Radio"
 tags: ["components"]
 ---
 
-Tapping on a **Radio** will turn it on. Radio inputs are normally used as a group in order to capture a mutually-exclusive choice, as is done in the [RadioGroup](https://github.com/framer/framer-education/wiki/RadioGroup) component.
+Tapping on a **Radio** will turn it on. Radio inputs are normally used as a
+group in order to capture a mutually-exclusive choice, as is done in the
+[RadioGroup](https://github.com/framer/framer-education/wiki/RadioGroup)
+component.
 
-| Prop                | Type       | Notes                                       |
-| :------------------ | :--------- | :------------------------------------------ |
-| **`value`**         | `boolean`  | Whether the Radio is checked.               |
-| **`disabled`**      | `boolean`  |                                             |
-| **`validation`**    | `function` | A callback that returns `true` or `false`.  |
-| **`onValueChange`** | `function` | The callback to fire when turned on or off. |
+| Prop                | Type       | Notes |
+| :------------------ | :--------- | :---- |
+| **`value`**         | `boolean`  |       |
+| **`disabled`**      | `boolean`  |       |
+| **`validation`**    | `function` |       |
+| **`onValueChange`** | `function` |       |
 
-See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section for more on how inputs work in Learn.
+See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
+for more on how inputs work in Learn.
 
 ## Examples
 

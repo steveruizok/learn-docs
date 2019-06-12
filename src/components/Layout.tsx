@@ -29,7 +29,7 @@ const wrapper = css`
     padding: 0.5 1em;
   }
 
-  & th:first-child {
+  & th:first-of-type {
     padding-left: 1em;
   }
 
@@ -42,7 +42,7 @@ const wrapper = css`
     border-spacing: 1px;
   }
 
-  & td:first-child {
+  & td:first-of-type {
     padding-left: 1em;
   }
 

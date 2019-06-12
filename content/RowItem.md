@@ -5,18 +5,21 @@ title: "RowItem"
 tags: ["components"]
 ---
 
-A **RowItem** displays text on the left side and an optional component on the right side: a Checkbox, Radio, Switch or Icon.
+A **RowItem** displays text on the left side and an optional component on the
+right side: a Checkbox, Radio, Switch or Icon.
 
-| Prop                | Type       | Notes                                           |
-| :------------------ | :--------- | :---------------------------------------------- |
-| **`text`**          | `string`   |                                                 |
-| **`value`**         | `boolean`  | The value to pass to the right component.       |
-| **`disabled`**      | `boolean`  |                                                 |
-| **`validation`**    | `function` | A callback that returns `true` or `false`.      |
-| **`onValueChange`** | `function` | The callback to fire when checked or unchecked. |
-| **`paddingLeft`**   | `number`   | The left padding on the RowItem's text.         |
+| Prop                | Type       | Notes                                   |
+| :------------------ | :--------- | :-------------------------------------- |
+| **`text`**          | `string`   |                                         |
+| **`component`**     | `string`   | The component to display, if any.       |
+| **`value`**         | `boolean`  | The value to pass to the component.     |
+| **`disabled`**      | `boolean`  |                                         |
+| **`validation`**    | `function` |                                         |
+| **`onValueChange`** | `function` |                                         |
+| **`paddingLeft`**   | `number`   | The left padding on the RowItem's text. |
 
-See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section for more on how inputs work in Learn.
+See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
+for more on how inputs work in Learn.
 
 ## Examples
 

@@ -34,9 +34,9 @@ Button’s `type` prop can accept one of the following types:
 ### Icon
 
 The Button's `icon` prop can accept either `“none”` (for no icon) or one of the
-Material Design Icon names from the list of [Icon
-Names](https://github.com/framer/framer-education/wiki/Icon Names). Setting an
-icon will hide the Button’s text. The default value is `"none"`.
+Material Design Icon names from the list of
+[Icon Names](https://framer-learn-docs.netlify.com/content/IconNames/). Setting
+an icon will hide the Button’s text. The default value is `"none"`.
 
 ## Examples
 

@@ -5,7 +5,8 @@ title: "TabBar"
 tags: ["components"]
 ---
 
-A **TabBar** models the bottom tab bar of an iOS app. Each of the bar's tabs is represented by an icon and an optional title.
+A **TabBar** models the bottom tab bar of an iOS app. Each of the bar's tabs is
+represented by an icon and an optional title.
 
 | Prop              | Type                                           | Notes            |
 | :---------------- | :--------------------------------------------- | :--------------- |
@@ -16,7 +17,13 @@ A **TabBar** models the bottom tab bar of an iOS app. Each of the bar's tabs is 
 
 ### Tab
 
-The `tabs` prop accepts an array of tabs. A tab may be either an [icon name](https://github.com/framer/framer-education/wiki/Icon Names) or an object with both an `icon` property (an icon name) and a `text` property (the label). If you're not planning to show titles, an array of icon names will be enough; however, if you are planning to show titles, you'll likely want to use the object format. If not, then the component will display the icon's name as its title.
+The `tabs` prop accepts an array of tabs. A tab may be either an
+[icon name](https://framer-learn-docs.netlify.com/content/IconNames/) or an
+object with both an `icon` property (an icon name) and a `text` property (the
+label). If you're not planning to show titles, an array of icon names will be
+enough; however, if you are planning to show titles, you'll likely want to use
+the object format. If not, then the component will display the icon's name as
+its title.
 
 ```tsx
 const tabExampleA = "accessible";

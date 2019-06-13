@@ -5,7 +5,10 @@ title: "NavigationBar"
 tags: ["components"]
 ---
 
-A **NavigationBar** models the top navigation bar of an iOS app. The bar has a title, an optional subtitle, and two tappable areas on its left and right sides. Each of these areas may have a link, icon or both. The bar has a taller “large” mode that sits the title below the bar.
+A **NavigationBar** models the top navigation bar of an iOS app. The bar has a
+title, an optional subtitle, and two tappable areas on its left and right sides.
+Each of these areas may have a link, icon or both. The bar has a taller “large”
+mode that sits the title below the bar.
 
 | Prop             | Type       | Notes                         |
 | :--------------- | :--------- | :---------------------------- |
@@ -21,7 +24,9 @@ A **NavigationBar** models the top navigation bar of an iOS app. The bar has a t
 
 ### Icon
 
-The `icon` prop can accept either `“none”` (for no icon) or one of the Material Design Icon names from the list of [Icon Names](https://github.com/framer/framer-education/wiki/Icon Names).
+The `icon` prop can accept either `“none”` (for no icon) or one of the Material
+Design Icon names from the list of
+[Icon Names](https://framer-learn-docs.netlify.com/content/IconNames/).
 
 ## Examples
 

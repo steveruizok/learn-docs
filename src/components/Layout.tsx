@@ -87,6 +87,8 @@ type RenderData = {
   readonly site: {
     readonly siteMetadata: {
       readonly title: string;
+      readonly description: string;
+      readonly keywords: string;
     };
   };
   allMdx: any;
@@ -135,11 +137,11 @@ export const Layout = ({ children }: LayoutProps) => (
             meta={[
               {
                 name: "description",
-                content: "Demo site for a Gatsby Starter in TypeScript"
+                content: data.site.siteMetadata.description
               },
               {
                 name: "keywords",
-                content: "gatsby, gatsbyjs, sample, demo, typescript"
+                content: data.site.siteMetadata.keywords
               }
             ]}
           />

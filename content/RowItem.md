@@ -18,7 +18,7 @@ right side: a Checkbox, Radio, Switch or Icon.
 | **`onValueChange`** | `function` |                                         |
 | **`paddingLeft`**   | `number`   | The left padding on the RowItem's text. |
 
-See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
+See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
 for more on how inputs work in Learn.
 
 ## Examples

@@ -1,107 +1,103 @@
 module.exports = {
   siteMetadata: {
-    title: 'Learn Design System',
-    author: 'Framer',
-    description: 'Docs for the Learn Design System',
-    siteUrl: 'https://goblindegook-gatsby-starter-typescript.netlify.com'
+    title: "Learn Design System",
+    author: "Framer",
+    description: "Docs for the Learn Design System",
+    siteUrl: "https://framer-learn-docs.netlify.com"
   },
   plugins: [
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-emotion',
+    "gatsby-plugin-typescript",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-catch-links",
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: 'src/typography',
+        pathToConfigModule: "src/typography",
         omitGoogleFont: true
-      }
-    },
-    'gatsby-plugin-catch-links',
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`merriweather sans`, `source sans pro`, 'merriweather'],
-        display: 'swap'
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'content',
+        name: "content",
         path: `${__dirname}/content`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'pages',
+        name: "pages",
         path: `${__dirname}/content/pages`
       }
     },
     {
-      resolve: 'gatsby-plugin-nprogress',
+      resolve: "gatsby-plugin-nprogress",
       options: {
-        color: '#ff5700',
+        color: "#ff5700",
         showSpinner: false
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-mdx',
+      resolve: "gatsby-mdx",
       options: {
-        extensions: ['.md', '.mdx'],
+        extensions: [".md", ".mdx"],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-smartypants',
+            resolve: "gatsby-remark-smartypants",
             options: {
-              dashes: 'oldschool'
+              dashes: "oldschool"
             }
           },
+          // {
+          // 	resolve: `gatsby-remark-codemirror`,
+          // 	options: {
+          // 		// CSS class suffix to be used for produced `<pre/>` blocks.
+          // 		// Default value is "default", which adds "cm-s-default" class.
+          // 		// This class name matches
+          // 		theme: 'default',
+          // 	},
+          // },
           {
-            resolve: 'gatsby-remark-prismjs',
+            resolve: "gatsby-remark-prismjs",
             options: {
-              classPrefix: 'language-',
+              classPrefix: "language-",
               inlineCodeMarker: {
-                tsx: 'tsx'
+                tsx: "tsx"
               },
               aliases: {}
             }
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1200,
               sizeByPixelDensity: true
             }
           },
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: "gatsby-remark-copy-linked-files",
             options: {}
           }
         ]
       }
     },
     {
-      resolve: 'gatsby-plugin-lunr',
+      resolve: "gatsby-plugin-lunr",
       options: {
         languages: [
           {
-            name: 'en',
-            customEntries: [
-              {
-                title: 'Another Page',
-                content: 'Welcome to page 2',
-                path: '/another-page/'
-              }
-            ]
+            name: "en",
+            customEntries: []
           }
         ],
         fields: [
-          { name: 'title', store: true, attributes: { boost: 20 } },
-          { name: 'path', store: true },
-          { name: 'content' },
-          { name: 'tags' }
+          { name: "title", store: true, attributes: { boost: 20 } },
+          { name: "path", store: true },
+          { name: "content" },
+          { name: "tags" }
         ],
         resolvers: {
           Mdx: {
@@ -114,7 +110,7 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: "gatsby-plugin-feed",
       options: {
         /**
          * no need to specify the other options, since they will be merged with this
@@ -128,9 +124,9 @@ module.exports = {
                   description: node.excerpt,
                   url: site.siteMetadata.siteUrl + node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + node.frontmatter.path,
-                  custom_elements: [{ 'content:encoded': node.html }]
-                }
-              })
+                  custom_elements: [{ "content:encoded": node.html }]
+                };
+              });
             },
             query: `
               {
@@ -152,40 +148,40 @@ module.exports = {
                 }
               }
             `,
-            output: 'rss.xml'
+            output: "rss.xml"
           }
         ]
       }
     },
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'Learn Design System Docs',
-        short_name: 'LDS Docs',
-        start_url: '/',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
-        display: 'minimal-ui',
+        name: "Learn Design System Docs",
+        short_name: "LDS Docs",
+        start_url: "/",
+        background_color: "#f7f0eb",
+        theme_color: "#a2466c",
+        display: "minimal-ui",
         icons: [
           {
             // Everything in /static will be copied to an equivalent
             // directory in /public during development and build, so
             // assuming your favicons are in /static/favicon,
             // you can reference them here
-            src: '/favicon/192.png',
-            sizes: '192x192',
-            type: 'image/png'
+            src: "/favicon/192.png",
+            sizes: "192x192",
+            type: "image/png"
           },
           {
-            src: '/favicon/512.png',
-            sizes: '512x512',
-            type: 'image/png'
+            src: "/favicon/512.png",
+            sizes: "512x512",
+            type: "image/png"
           }
         ]
       }
     },
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
-    'gatsby-plugin-netlify'
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-offline",
+    "gatsby-plugin-netlify"
   ]
-}
+};

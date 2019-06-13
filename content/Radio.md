@@ -17,7 +17,7 @@ component.
 | **`validation`**    | `function` |       |
 | **`onValueChange`** | `function` |       |
 
-See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
+See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
 for more on how inputs work in Learn.
 
 ## Examples

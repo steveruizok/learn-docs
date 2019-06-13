@@ -10,13 +10,13 @@ be selected at once.
 
 | Prop                | Type       | Notes                                       |
 | :------------------ | :--------- | :------------------------------------------ |
-| **`options`**       | `string`[] | The input's options.                        |
+| **`options`**       | `string[]` | The input's options.                        |
 | **`value`**         | `string`   | The input's selected option.                |
 | **`disabled`**      | `boolean`  |                                             |
 | **`validation`**    | `function` |                                             |
 | **`onValueChange`** | `function` | The callback to fire when turned on or off. |
 
-See the [Inputs](https://github.com/framer/framer-education/wiki/Inputs) section
+See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
 for more on how inputs work in Learn.
 
 ## Examples

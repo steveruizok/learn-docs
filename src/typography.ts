@@ -56,6 +56,9 @@ const typography = new Typography({
       fontSize: "16px",
       lineHeight: 1.8
     },
+    li: {
+      lineHeight: 1.8
+    },
     td: {
       fontSize: "16px",
       lineHeight: 1.6

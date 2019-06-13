@@ -50,10 +50,9 @@ pre[class*='language-'] {
 
 code[class*='language-'] {
 	text-align: left;
-	white-space: pre;
+	white-space: nowrap;
 	word-spacing: normal;
 	word-break: normal;
-	word-wrap: normal;
 	line-height: 1.5;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -67,6 +66,7 @@ code[class*='language-'] {
 	font-weight: 400;
 	color: #3c3b68;
 	border: 1px solid #ccc;
+	overflow: scroll;
 }
 
 pre code[class*='language-'] {

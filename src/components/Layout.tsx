@@ -73,6 +73,10 @@ const wrapper = css`
     border: 1px solid ${colors.Border};
     width: 100%;
   }
+
+  & ol {
+    margin: 2em 0 2em 2.5em;
+  }
 `;
 
 type LayoutProps = {

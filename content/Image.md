@@ -5,7 +5,8 @@ title: "Image"
 tags: ["components"]
 ---
 
-An **Image** shows an image with an optional color overlay. It may also have a [Favorite]().
+An **Image** shows an image with an optional color overlay. It may also have a
+[Favorite]().
 
 | Prop                   | Type       | Notes                                   |
 | :--------------------- | :--------- | :-------------------------------------- |

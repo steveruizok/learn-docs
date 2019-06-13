@@ -27,15 +27,15 @@ const typography = new Typography({
       fontWeight: 600
     },
     h3: {
+      fontSize: "20px",
+      fontWeight: 600
+    },
+    h4: {
       fontSize: "16px",
       fontWeight: 600
     },
     lead: {
       fontSize: "20px"
-    },
-    body: {
-      fontSize: "16px",
-      lineSpacing: 1.3
     },
     link: {
       fontSize: "16ox",
@@ -54,11 +54,11 @@ const typography = new Typography({
     },
     p: {
       fontSize: "16px",
-      lineHeight: 2
+      lineHeight: 1.8
     },
     td: {
       fontSize: "16px",
-      lineHeight: 2
+      lineHeight: 1.6
     }
   })
 });

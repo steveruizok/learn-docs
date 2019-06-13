@@ -66,7 +66,7 @@ export const Header = ({ title }: HeaderProps) => (
       <h2 css={style.title}>
         <TitleLink to="/">{title}</TitleLink>
       </h2>
-      <LunrSearch limit={10} />
+      {/* <LunrSearch limit={10} /> */}
     </div>
   </div>
 );

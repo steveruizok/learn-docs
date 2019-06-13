@@ -5,7 +5,8 @@ title: "Logo"
 tags: ["components"]
 ---
 
-A **Logo** returns an SVG logo for the Learn Design System. It can be flat (all one color).
+A **Logo** returns an SVG logo for the Learn Design System. It can be flat (all
+one color).
 
 | Prop       | Type      | Notes    |
 | :--------- | :-------- | :------- |

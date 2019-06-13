@@ -14,8 +14,8 @@ const list = css`
   text-align: right;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 
-  & h3 {
-    padding-bottom: 0.5em;
+  & h4 {
+    padding-bottom: 0.35em;
   }
 
   & a {
@@ -36,7 +36,7 @@ export const Sidebar = ({ edges }: SidebarProps) => (
             activeStyle={{ color: "#0056fe" }}
             to={path}
           >
-            <h3 style={{ color: "inherit" }}>{title}</h3>
+            <h4 style={{ color: "inherit" }}>{title}</h4>
           </Link>
         </li>
       );

@@ -24,18 +24,20 @@ const wrapper = css`
     background-color: ${colors.Neutral};
   }
 
-  & th {
-    width: 156px;
-    padding: 0.5 1em;
-  }
-
   & th:first-of-type {
     padding-left: 1em;
   }
 
+  & th {
+    width: 156px;
+    padding: 1em;
+    border-right: 1px solid ${colors.Border};
+  }
+
   & th:last-child {
-    padding-right: 0em;
+    padding-right: 1em;
     width: auto;
+    border-right: none;
   }
 
   tbody {
@@ -48,8 +50,14 @@ const wrapper = css`
 
   & td {
     vertical-align: top;
-    padding: 0.5 1em;
+    padding: 1em;
     border-bottom: 1px solid ${colors.Border};
+    border-right: 1px solid ${colors.Border};
+  }
+
+  & td:last-of-type {
+    padding-right: 1em;
+    border-right: none;
   }
 
   & tr:last-child td {

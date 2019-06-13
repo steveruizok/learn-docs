@@ -83,12 +83,10 @@ table code[class*='language-']::after {
 
 table code[class*='language-'] {
 	font-family: Roboto Mono, monospace;
-	font-weight: 600;
-	font-size: 13px;
+	font-weight: 500;
+	font-size: 15px;
 	border-radius: 4px;
-	padding: 2px 4px;
-	position: relative;
-	top: -1px;
+	padding: 1px 4px;
 }
 
 p code,
@@ -96,10 +94,10 @@ div > code,
 table > code,
 li > code {
 	font-family: Roboto Mono, monospace;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 15px;
 	border-radius: 4px;
-	padding: 2px 4px;
+	padding: 1px 4px;
 }
 .token.comment,
 .token.prolog,

@@ -6,40 +6,32 @@ import parnassusTheme from "typography-theme-parnassus";
 
 const typography = new Typography({
   ...parnassusTheme,
-  headerColor: "#3c3b68",
-  bodyColor: "#3c3b68",
+  headerColor: "#333333",
+  bodyColor: "#333333",
   headerFontFamily: ["Helvetica Neue", "Arial", "serif"],
   bodyFontFamily: ["Helvetica Neue", "Arial", "serif"],
   baseLineHeight: 2,
   headerWeight: 800,
-  baseFontSize: "16px",
+  baseFontSize: "18px",
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     "h1,h2,h3,h4,h5,h6": {
       lineHeight: 1.2
     },
     h1: {
-      fontSize: "40px",
       letterSpacing: -1,
       fontWeight: 600
     },
     h2: {
-      fontSize: "24px",
       fontWeight: 600
     },
     h3: {
-      fontSize: "20px",
       fontWeight: 600
     },
     h4: {
-      fontSize: "16px",
-      fontWeight: 600
+      fontWeight: 500
     },
     lead: {
       fontSize: "20px"
-    },
-    link: {
-      fontSize: "16ox",
-      fontWeight: 600
     },
     label: {
       fontSize: "13px",
@@ -53,15 +45,21 @@ const typography = new Typography({
       fontWeight: 500
     },
     p: {
-      fontSize: "16px",
       lineHeight: 1.8
     },
     li: {
       lineHeight: 1.8
     },
     td: {
-      fontSize: "16px",
       lineHeight: 1.6
+    },
+    a: {
+      color: "#0056fe",
+      textDecoration: "underline"
+    },
+    "a:hover, a:active": {
+      color: "#0056fe",
+      textDecoration: "underline"
     }
   })
 });

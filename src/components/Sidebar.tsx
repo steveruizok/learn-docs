@@ -10,9 +10,8 @@ const list = css`
   line-height: 1.8;
   list-style: none;
   padding-top: 8px;
-  margin: 1.5rem 0 3rem;
-  text-align: right;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 0rem 0 3rem;
+  text-align: left;
 
   & h4 {
     padding-bottom: 0.35em;
@@ -23,16 +22,14 @@ const list = css`
   }
 `;
 
-const item = css``;
-
 export const Sidebar = ({ edges }: SidebarProps) => (
   <ul css={list}>
     {edges.map(({ node }) => {
       const { path, title } = node.frontmatter;
       return (
-        <li css={item} key={path}>
+        <li key={path}>
           <Link
-            style={{ color: "#3c3b68" }}
+            style={{ color: "#444444" }}
             activeStyle={{ color: "#0056fe" }}
             to={path}
           >

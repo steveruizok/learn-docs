@@ -21,7 +21,7 @@ const wrapper = css`
 
   & thead {
     color: ${colors.Dark};
-    background-color: ${colors.Neutral};
+    background-color: #f3f3f3;
   }
 
   & th:first-of-type {
@@ -72,6 +72,7 @@ const wrapper = css`
     padding: 0;
     border: 1px solid ${colors.Border};
     width: 100%;
+    overflow: hidden;
   }
 
   & ol {

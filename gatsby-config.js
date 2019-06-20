@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Learn Design System",
-    author: "Framer",
+    author: "Steve Ruiz <steve@framer.com>",
     description: "Docs for the Learn Design System",
     siteUrl: "https://framer-learn-docs.netlify.com"
   },

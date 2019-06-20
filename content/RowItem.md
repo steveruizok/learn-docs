@@ -21,6 +21,19 @@ right side: a Checkbox, Radio, Switch or Icon.
 See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
 for more on how inputs work in Learn.
 
+### Component
+
+A RowItem's `comoponent` prop can accept one of the following options:
+
+| Component    |
+| ------------ |
+| `"text"`     |
+| `"icon"`     |
+| `“switch”`   |
+| `“radio”`    |
+| `“checkbox”` |
+| `"stepper"`  |
+
 ## Examples
 
 ```tsx

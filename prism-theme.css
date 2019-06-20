@@ -3,6 +3,7 @@
 }
 code {
 	background-color: #fdfdfd;
+	line-height: 1;
 	white-space: pre-wrap !important;
 }
 .prism-code {
@@ -27,6 +28,7 @@ code {
 
 pre {
 	position: relative;
+	line-height: 1.5;
 	border: 1px solid #ccc;
 	background-color: #fdfdfd !important;
 }
@@ -37,7 +39,6 @@ pre *::selection {
 }
 
 pre code span {
-	line-height: 1.6;
 }
 
 pre[class*='language-'] {
@@ -53,7 +54,6 @@ code[class*='language-'] {
 	white-space: nowrap;
 	word-spacing: normal;
 	word-break: normal;
-	line-height: 1.5;
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	tab-size: 4;
@@ -62,7 +62,7 @@ code[class*='language-'] {
 	-ms-hyphens: none;
 	hyphens: none;
 	font-family: Roboto Mono, monospace;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 400;
 	color: #3c3b68;
 	border: 1px solid #ccc;
@@ -84,9 +84,8 @@ table code[class*='language-']::after {
 table code[class*='language-'] {
 	font-family: Roboto Mono, monospace;
 	font-weight: 500;
-	font-size: 15px;
-	border-radius: 4px;
-	padding: 1px 4px;
+	font-size: 16px;
+	border: none;
 }
 
 p code,
@@ -97,7 +96,7 @@ li > code {
 	font-weight: 500;
 	font-size: 15px;
 	border-radius: 4px;
-	padding: 1px 4px;
+	padding: 2px 6px;
 }
 .token.comment,
 .token.prolog,

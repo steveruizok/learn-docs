@@ -13,9 +13,9 @@ const style = {
   `,
   wrapper: css`
     display: grid;
-    grid-template-columns: 160px 1fr 16rem;
+    grid-template-columns: 48px 1fr 16rem;
     grid-template-rows: 80px;
-    grid-gap: 64px;
+    grid-gap: 16px;
     align-items: center;
     height: 80px;
     padding: 0px 1.2em;
@@ -48,25 +48,16 @@ export const Header = ({ title }: HeaderProps) => (
     <div css={style.wrapper}>
       <div
         css={css`
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          margin-right: -8px;
+          width: 48px;
+          height: 48px;
         `}
       >
-        <div
-          css={css`
-            width: 48px;
-            height: 48px;
-          `}
-        >
+        <TitleLink to="/">
           <Logo />
-        </div>
+        </TitleLink>
       </div>
-      <h2 css={style.title}>
-        <TitleLink to="/">{title}</TitleLink>
-      </h2>
-      {/* <LunrSearch limit={10} /> */}
     </div>
+
+    {/* <LunrSearch limit={10} /> */}
   </div>
 );

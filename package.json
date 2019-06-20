@@ -1,8 +1,8 @@
 {
-  "name": "@goblindegook/gatsby-starter-typescript",
-  "description": "A Gatsby starter the way I like it.",
+  "name": "Learn Design System Docs",
+  "description": "Docs for the Learn Design System package.",
   "version": "1.0.0",
-  "author": "Luís Rodrigues <hello@goblindegook.com>",
+  "author": "Steve Ruiz <steve@framer.com>",
   "dependencies": {
     "@emotion/core": "^10.0.4",
     "@emotion/styled": "^10.0.4",

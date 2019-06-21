@@ -4,7 +4,7 @@ import { css } from "@emotion/core";
 // @ts-ignore
 import { Link } from "gatsby";
 import { Logo } from "./Logo";
-import { LunrSearch } from "./LunrSearch";
+// import { LunrSearch } from "./LunrSearch";
 
 const style = {
   container: css`

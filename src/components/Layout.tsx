@@ -8,7 +8,7 @@ import { colors } from "./colors";
 
 const wrapper = css`
   margin: 0 auto;
-  max-width: 1260px;
+  max-width: 1080px;
   padding: 0em 1.0875rem 1.45rem;
   display: grid;
   grid-auto-flow: row;

@@ -17,7 +17,7 @@ const list = css`
   & h4 {
     font-size: 16px;
     font-weight: 600;
-    padding-bottom: 0.25em;
+    padding-bottom: 0em;
   }
 
   & a {
@@ -41,7 +41,7 @@ export const Sidebar = ({ edges }: SidebarProps) => (
       return (
         <li key={path} style={{ paddingLeft: 8 }}>
           <Link
-            style={{ color: "#444444" }}
+            style={{ color: "#555555" }}
             activeStyle={{ color: "#0056fe" }}
             to={path}
           >

@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { Link } from "gatsby";
+import { Logo } from "./Logo";
 
 type SidebarProps = {
   readonly edges: Edges<Markdown>;
@@ -10,24 +11,35 @@ const list = css`
   line-height: 1.8;
   list-style: none;
   padding-top: 8px;
-  margin: 0rem 0 3rem;
+  margin: 16px 0 3rem;
   text-align: left;
 
   & h4 {
-    padding-bottom: 0.35em;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 0.25em;
   }
 
   & a {
     text-decoration: none;
   }
+
+  & a:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Sidebar = ({ edges }: SidebarProps) => (
   <ul css={list}>
+    <li>
+      <Link to="/">
+        <Logo />
+      </Link>
+    </li>
     {edges.map(({ node }) => {
       const { path, title } = node.frontmatter;
       return (
-        <li key={path}>
+        <li key={path} style={{ paddingLeft: 8 }}>
           <Link
             style={{ color: "#444444" }}
             activeStyle={{ color: "#0056fe" }}

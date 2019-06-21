@@ -1,32 +1,32 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
-import { Layout } from '../components/Layout'
+import React from "react";
+import { graphql } from "gatsby";
+import Helmet from "react-helmet";
+import { Layout } from "../components/Layout";
 
-const MDXRenderer = require('gatsby-mdx/mdx-renderer')
+const MDXRenderer = require("gatsby-mdx/mdx-renderer");
 
 type ContentTemplateProps = {
   readonly data: {
-    readonly mdx: Markdown
-    readonly site: Site
-  }
-}
+    readonly mdx: Markdown;
+    readonly site: Site;
+  };
+};
 
 const ContentTemplate = ({ data }: ContentTemplateProps) => {
   const {
     mdx: { frontmatter, code }
-  } = data
+  } = data;
 
   return (
     <Layout>
       <Helmet title={`${frontmatter.title}`} />
-      <h1>{frontmatter.title}</h1>
+      <h1 style={{ marginBottom: 60 }}>{frontmatter.title}</h1>
       <MDXRenderer>{code.body}</MDXRenderer>
     </Layout>
-  )
-}
+  );
+};
 
-export default ContentTemplate
+export default ContentTemplate;
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -41,4 +41,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

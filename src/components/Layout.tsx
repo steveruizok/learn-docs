@@ -9,7 +9,7 @@ import { colors } from "./colors";
 const wrapper = css`
   margin: 0 auto;
   max-width: 1260px;
-  padding: 16px 1.0875rem 1.45rem;
+  padding: 0em 1.0875rem 1.45rem;
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: 160px 1fr;
@@ -21,17 +21,17 @@ const wrapper = css`
 
   & thead {
     color: ${colors.Dark};
-    background-color: #f3f3f3;
+    background-color: #f3f3fa;
   }
 
   & th:first-of-type {
+    width: 156px;
     padding-left: 1em;
   }
 
   & th {
-    width: 156px;
+    width: 200px;
     padding: 1em;
-    border-right: 1px solid ${colors.Border};
   }
 
   & th:last-child {
@@ -52,7 +52,6 @@ const wrapper = css`
     vertical-align: top;
     padding: 1em;
     border-bottom: 1px solid ${colors.Border};
-    border-right: 1px solid ${colors.Border};
   }
 
   & td:last-of-type {
@@ -68,7 +67,7 @@ const wrapper = css`
     border-spacing: 0px;
     border-collapse: separate;
     background-color: #fdfdfd;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 0;
     border: 1px solid ${colors.Border};
     width: 100%;
@@ -146,10 +145,10 @@ export const Layout = ({ children }: LayoutProps) => (
               }
             ]}
           />
-          <Header title={data.site.siteMetadata.title} />
+          {/* <Header title={data.site.siteMetadata.title} /> */}
           <div css={wrapper}>
             <Sidebar edges={data.allMdx.edges} />
-            <div>{children}</div>
+            <div style={{ paddingTop: "8px" }}>{children}</div>
           </div>
         </>
       );

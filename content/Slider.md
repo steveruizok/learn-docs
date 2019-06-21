@@ -46,28 +46,26 @@ export function SliderExample(): Override {
 ```tsx
 // Code component
 
-import * as React from 'react'
-import { Frame } from 'framer'
-import { Slider } from '@framer/steveruizok.education/code'
+import * as React from "react";
+import { Frame } from "framer";
+import { Slider } from "@framer/steveruizok.education/code";
 
-export const SliderExample = (props) => {
-
+export const SliderExample = props => {
   const handleValueChange = (value, valid) =>
-			console.log('Value: ' + value, 'Valid' + valid),
-	}
+    console.log("Value: " + value, "Valid: " + valid);
 
-	return (
-		<Frame size="100%" background="none">
-			<Slider
-				min={0}
-				max={100}
+  return (
+    <Frame size="100%" background="none">
+      <Slider
+        min={0}
+        max={100}
         value={60}
         step={1}
-				validation={(value) => value >= 50}
-				onValueChange={handleValueChange}
-				center
-			/>
-		</Frame>
-	)
-}
+        validation={value => value >= 50}
+        onValueChange={handleValueChange}
+        center
+      />
+    </Frame>
+  );
+};
 ```

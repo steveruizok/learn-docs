@@ -7,7 +7,7 @@ import { Layout } from "../components/Layout";
 export const IndexPage = (props: any) => {
   return (
     <>
-      <h1>Welcome</h1>
+      <h1 style={{ marginBottom: 60 }}>Welcome</h1>
       <p>
         Welcome to the <b>Learn Design System</b> docs. The Learn Design System
         is a set of components designed to get you started prototyping with

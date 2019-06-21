@@ -19,6 +19,7 @@ const typography = new Typography({
     },
     h1: {
       letterSpacing: -1,
+      fontSize: "96px",
       fontWeight: 600
     },
     h2: {

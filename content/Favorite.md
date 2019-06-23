@@ -32,7 +32,8 @@ export function FavoriteExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
-import { Favorite } from "@framer/steveruizok.education/code/Favorite";
+// @ts-ignore
+import { Favorite } from "@framer/steveruizok.education/code";
 
 export const FavoriteExample = props => {
   const handleValueChange = (value, valid) => {

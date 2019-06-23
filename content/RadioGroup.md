@@ -20,8 +20,7 @@ value is the currently selected option.
 | **`validation`**    | `function` |                                                   |
 | **`onValueChange`** | `function` |                                                   |
 
-See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
-for more on how inputs work in Learn.
+See the [Inputs](content/Inputs/) section for more on how inputs work in Learn.
 
 ## Examples
 
@@ -43,7 +42,8 @@ export function RadioGroupExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
-import { RadioGroup } from "@framer/steveruizok.education/code/RadioGroup";
+// @ts-ignore
+import { RadioGroup } from "@framer/steveruizok.education/code";
 
 export const RadioGroupExample = props => {
   const handleValueChange = (value, valid) => {

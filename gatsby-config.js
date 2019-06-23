@@ -11,6 +11,13 @@ module.exports = {
     "gatsby-plugin-emotion",
     "gatsby-plugin-catch-links",
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`roboto`, `roboto mono`],
+        display: "swap"
+      }
+    },
+    {
       resolve: "gatsby-plugin-typography",
       options: {
         pathToConfigModule: "src/typography",

@@ -15,7 +15,7 @@ A **CardList** is a scrollable stack of cards.
 ## Cards
 
 The `cards` prop accepts an array of objects. Each object in the array is the
-props for a [Card]("./Card") instance.
+props for a [Card](/content/Card) instance.
 
 ## Examples
 

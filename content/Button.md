@@ -34,9 +34,8 @@ Button’s `type` prop can accept one of the following types:
 ### Icon
 
 The Button's `icon` prop can accept either `“none”` (for no icon) or one of the
-Material Design Icon names from the list of
-[Icon Names](https://framer-learn-docs.netlify.com/content/IconNames/). Setting
-an icon will hide the Button’s text. The default value is `"none"`.
+Material Design Icon names from the list of [Icon Names](content/IconNames/).
+Setting an icon will hide the Button’s text. The default value is `"none"`.
 
 ## Examples
 
@@ -86,6 +85,7 @@ export const OnOffButton: Override = props => {
 
 import * as React from "react";
 import { Stack, Frame } from "framer";
+// @ts-ignore
 import { Button } from "@framer/steveruizok.education/code";
 
 export const ButtonTest = props => {

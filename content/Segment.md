@@ -16,8 +16,7 @@ be selected at once.
 | **`validation`**    | `function` |                                             |
 | **`onValueChange`** | `function` | The callback to fire when turned on or off. |
 
-See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
-for more on how inputs work in Learn.
+See the [Inputs](content/Inputs/) section for more on how inputs work in Learn.
 
 ## Examples
 
@@ -39,7 +38,8 @@ export function SegmentExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
-import { Segment } from "@framer/steveruizok.education/code/Segment";
+// @ts-ignore
+import { Segment } from "@framer/steveruizok.education/code";
 
 export const SegmentExample = props => {
   const handleValueChange = (value, valid) => {

@@ -6,9 +6,9 @@ tags: ["components"]
 ---
 
 A **CheckboxGroup** takes a set of options and turns them into a set of
-[RowItem](http://localhost:8000/content/RowItem)s, each of which displays the
-option together with a [Checkbox](http://localhost:8000/content/Checkbox). The
-CheckboxGroup’s value is an array containing all checked options.
+[RowItem](content/RowItem)s, each of which displays the option together with a
+[Checkbox](content/Checkbox). The CheckboxGroup’s value is an array containing
+all checked options.
 
 | Prop                | Type       | Notes                                             |
 | :------------------ | :--------- | :------------------------------------------------ |
@@ -19,8 +19,7 @@ CheckboxGroup’s value is an array containing all checked options.
 | **`validation`**    | `function` |                                                   |
 | **`onValueChange`** | `function` |                                                   |
 
-See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
-for more on how inputs work in Learn.
+See the [Inputs](content/Inputs/) section for more on how inputs work in Learn.
 
 ## Examples
 
@@ -40,6 +39,7 @@ export function CheckboxGroupExample(): Override {
 // Code Overrides
 import * as React from "react";
 import { Frame } from "framer";
+// @ts-ignore
 import { CheckboxGroup } from "@framer/steveruizok.education/code";
 
 export const CheckboxGroupExample = props => {

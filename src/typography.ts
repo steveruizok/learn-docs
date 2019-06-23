@@ -8,14 +8,17 @@ const typography = new Typography({
   ...parnassusTheme,
   headerColor: "#333333",
   bodyColor: "#333333",
-  headerFontFamily: ["Helvetica Neue", "Arial", "serif"],
-  bodyFontFamily: ["Helvetica Neue", "Arial", "serif"],
+  headerFontFamily: ["Helvetica Neue", "Arial", "sans-serif"],
+  bodyFontFamily: ["Roboto", "Georgia", "serif"],
   baseLineHeight: 2,
   headerWeight: 800,
   baseFontSize: "18px",
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     "h1,h2,h3,h4,h5,h6": {
       lineHeight: 1.2
+    },
+    code: {
+      fontFamily: "Roboto Mono"
     },
     h1: {
       letterSpacing: -1,
@@ -44,6 +47,9 @@ const typography = new Typography({
     caption: {
       fontSize: "12px",
       fontWeight: 500
+    },
+    b: {
+      fontWeight: 800
     },
     p: {
       lineHeight: 1.8

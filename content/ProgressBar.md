@@ -38,6 +38,7 @@ export function ProgressBarExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
+// @ts-ignore
 import { ProgressBar } from "@framer/steveruizok.education/code";
 
 export const ProgressBarExample = props => {

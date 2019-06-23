@@ -19,6 +19,7 @@ one color).
 // Overrides
 
 import { Override } from "framer";
+// @ts-ignore
 import { colors } from "@framer/steveruizok.education/code";
 
 export function LogoExample(): Override {
@@ -34,6 +35,7 @@ export function LogoExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
+// @ts-ignore
 import { Logo, colors } from "@framer/steveruizok.education/code";
 
 export const LogoExample = props => {

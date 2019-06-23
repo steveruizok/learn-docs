@@ -6,7 +6,8 @@ tags: ["components"]
 ---
 
 A **RowItem** displays text on the left side and an optional component on the
-right side: a Checkbox, Radio, Switch or Icon.
+right side: another [Text](/content/Text), a [Checkbox](/content/Checkbox),
+[Radio](/content/Radio), [Switch](/content/Switch) or [Icon](/content/Icon).
 
 | Prop                | Type       | Notes                                   |
 | :------------------ | :--------- | :-------------------------------------- |
@@ -18,8 +19,7 @@ right side: a Checkbox, Radio, Switch or Icon.
 | **`onValueChange`** | `function` |                                         |
 | **`paddingLeft`**   | `number`   | The left padding on the RowItem's text. |
 
-See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
-for more on how inputs work in Learn.
+See the [Inputs](content/Inputs/) section for more on how inputs work in Learn.
 
 ### Component
 
@@ -33,42 +33,3 @@ A RowItem's `comoponent` prop can accept one of the following options:
 | `“radio”`    |
 | `“checkbox”` |
 | `"stepper"`  |
-
-## Examples
-
-```tsx
-// Overrides
-
-import { Override } from "framer";
-
-export function RadioGroupExample(): Override {
-  return {
-    options: ["Paris", "New York", "London", "Hong Kong"],
-    onValueChange: value => console.log(value)
-  };
-}
-```
-
-```tsx
-// Code component
-
-import * as React from "react";
-import { Frame } from "framer";
-import { RadioGroup } from "@framer/steveruizok.education/code/RadioGroup";
-
-export const RadioGroupExample = props => {
-  const handleValueChange = (value, valid) => {
-    console.log(value);
-  };
-
-  return (
-    <Frame size="100%" background="none">
-      <RadioGroup
-        center
-        options={["Paris", "New York", "London", "Hong Kong"]}
-        onValueChange={handleValueChange}
-      />
-    </Frame>
-  );
-};
-```

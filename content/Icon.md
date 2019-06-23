@@ -41,6 +41,7 @@ export function IconExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
+// @ts-ignore
 import { colors, Icon } from "@framer/steveruizok.education/code";
 
 export const IconExample = props => {

@@ -19,8 +19,7 @@ number.
 | **`max`**           | `number`   | The input's maximum value. |
 | **`step`**          | `number`   | The input's step.          |
 
-See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs) section
-for more on how inputs work in Learn.
+See the [Inputs](content/Inputs) section for more on how inputs work in Learn.
 
 ## Examples
 
@@ -47,6 +46,7 @@ export function StepperExample(): Override {
 
 import * as React from 'react'
 import { Frame } from 'framer'
+// @ts-ignore
 import { Slider } from '@framer/steveruizok.education/code'
 
 export const StepperExample = (props) => {

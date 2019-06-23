@@ -48,6 +48,7 @@ export function SliderExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
+// @ts-ignore
 import { Slider } from "@framer/steveruizok.education/code";
 
 export const SliderExample = props => {

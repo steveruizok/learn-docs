@@ -25,8 +25,7 @@ mode that sits the title below the bar.
 ### Icon
 
 The `icon` prop can accept either `“none”` (for no icon) or one of the Material
-Design Icon names from the list of
-[Icon Names](https://framer-learn-docs.netlify.com/content/IconNames/).
+Design Icon names from the list of [Icon Names](content/IconNames/).
 
 ## Examples
 
@@ -54,7 +53,8 @@ export function NavigationBarExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
-import { NavigationBar } from "@framer/steveruizok.education/code/NavigationBar";
+// @ts-ignore
+import { NavigationBar } from "@framer/steveruizok.education/code";
 
 export const RadioExample = props => {
   return (

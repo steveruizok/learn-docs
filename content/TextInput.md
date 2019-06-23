@@ -26,8 +26,7 @@ for customizing the input's interactivity and content.
 | **`onFocus`**       | `function`              | Called when the user navigates to the input.                                                                                                      |
 | **`onInputStart`**  | `function`              | Called when the user begins entering text.                                                                                                        |
 
-See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
-for more on how inputs work in Learn.
+See the [Inputs](content/Inputs/) section for more on how inputs work in Learn.
 
 ## Message
 
@@ -125,7 +124,8 @@ export function TextInputExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
-import { TextInput } from "@framer/steveruizok.education/code/TextInput";
+// @ts-ignore
+import { TextInput } from "@framer/steveruizok.education/code";
 
 export const TextInputExample = props => {
   const handleValueChange = (value, valid) => {

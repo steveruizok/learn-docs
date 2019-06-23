@@ -17,7 +17,7 @@ type Props = Partial<FrameProps> & {
   }>;
 ```
 
-A **Chip** is a auto-sizing text often used in [ChipList]("./ChipList")s.
+A **Chip** is a auto-sizing text often used in [ChipList]("content/ChipList)s.
 
 | Prop            | Type       | Notes                                                   |
 | :-------------- | :--------- | :------------------------------------------------------ |

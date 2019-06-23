@@ -17,8 +17,7 @@ component.
 | **`validation`**    | `function` |       |
 | **`onValueChange`** | `function` |       |
 
-See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs/) section
-for more on how inputs work in Learn.
+See the [Inputs](content/Inputs/) section for more on how inputs work in Learn.
 
 ## Examples
 
@@ -39,7 +38,8 @@ export function RadioExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
-import { Radio } from "@framer/steveruizok.education/code/Radio";
+// @ts-ignore
+import { Radio } from "@framer/steveruizok.education/code";
 
 export const RadioExample = props => {
   const handleValueChange = (value, valid) => {

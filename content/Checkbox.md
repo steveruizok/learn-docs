@@ -14,8 +14,7 @@ Tapping on a **Checkbox** will toggled it between on or off.
 | **`validation`**    | `function` |       |
 | **`onValueChange`** | `function` |       |
 
-See the [Inputs](https://framer-learn-docs.netlify.com/content/Inputs) section
-for more on how inputs work in Learn.
+See the [Inputs](content/Inputs) section for more on how inputs work in Learn.
 
 ## Examples
 
@@ -32,6 +31,7 @@ export function CheckboxExample(): Override {
 ```tsx
 import * as React from "react";
 import { Frame } from "framer";
+// @ts-ignore
 import { Checkbox } from "@framer/steveruizok.education/code";
 
 export const CheckboxExample = props => {

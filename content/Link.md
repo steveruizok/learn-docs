@@ -21,9 +21,8 @@ A **Link** displays either text or an icon. It can be tapped and will run an
 ### Icon
 
 The Link's `icon` prop can accept either `“none”` or one of the Material Design
-Icon names from the list of
-[Icon Names](https://framer-learn-docs.netlify.com/content/IconNames/). Setting
-an icon will hide the Button’s text.
+Icon names from the list of [Icon Names](content/IconNames/). Setting an icon
+will hide the Button’s text.
 
 ### Type
 
@@ -109,7 +108,8 @@ export function LinkExample(): Override {
 
 import * as React from "react";
 import { Frame } from "framer";
-import { Link } from "@framer/steveruizok.education/code/Link";
+// @ts-ignore
+import { Link } from "@framer/steveruizok.education/code";
 
 export const LinkExample = props => {
   const handleTap = () => {

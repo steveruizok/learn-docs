@@ -40,14 +40,24 @@ an icon will hide the Button’s text. The default value is `"none"`.
 
 ## Examples
 
+#### Overrides
+
 ```tsx
-// Overrides
+// App.tsx
 
 import { Override } from "framer";
 
 export function ButtonExample(): Override {
   return {
     onTap: () => console.log("Tapped!")
+  };
+}
+
+export function ToggkeButtonExample(): Override {
+  return {
+    toggle: true,
+    toggled: false,
+    onTap: toggled => console.log("Toggled: " + toggled)
   };
 }
 ```
@@ -105,6 +115,8 @@ export const ButtonTest = props => {
   );
 };
 ```
+
+#### Code Component
 
 ```tsx
 // Code component (with toggle)

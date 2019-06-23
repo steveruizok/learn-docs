@@ -38,15 +38,14 @@ pre *::selection {
 	color: inherit;
 }
 
-pre code span {
-}
-
 pre[class*='language-'] {
 	border: 1px solid #ccc;
 	padding: 32px;
 	border-radius: 4px;
 	display: block;
 	background-color: #fdfdfd;
+	max-height: 400px;
+	overflow: scroll;
 }
 
 code[class*='language-'] {

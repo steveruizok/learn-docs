@@ -5,26 +5,53 @@ title: "CardList"
 tags: ["components"]
 ---
 
-🚧 👷‍♂️`Under Construction` 👷‍♀️🚧
+A **CardList** is a scrollable stack of cards.
+
+| Prop            | Type       | Notes                                                |
+| :-------------- | :--------- | :--------------------------------------------------- |
+| **`cards`**     | `object[]` | See _Cards_ below.                                   |
+| **`emptyText`** | `string`   | The text to display when the `cards` array is empty. |
+
+## Cards
+
+The `cards` prop accepts an array of objects. Each object in the array is the
+props for a [Card]("./Card") instance.
+
+## Examples
+
+#### Overrides
 
 ```tsx
-type Props = Partial<ScrollProps> & {
-  items: Item[];
-  emptyText: string;
-};
-```
+// App.tsx
 
-Each item:
+import { Override } from 'framer'
 
-```tsx
-type Item = {
-  text: string;
-  height: number;
-  component: string;
-  icon: string;
-  value: string;
-  emptyText: string;
-  onTap: () => void;
-  onValueChange: (value) => void;
-};
+// Event Handlers
+
+const handleFavoriteChange = (isFavorite) => {
+	console.log("Card C is favorite: " + isFavorite)
+}
+
+// Overrides
+
+export function CardListExample(): Override {
+	return {
+		cards: [
+			{
+				title: 'Card A',
+			},
+			{
+				title: 'Card B',
+				body: "This is the list's second card",
+			},
+			{
+				image: 'http://imgur.com/exampleImage',
+				favorite: true,
+				isFavorite: true,
+				onFavoriteChange: handleFavoriteChange
+				},
+			},
+		],
+	}
+}
 ```

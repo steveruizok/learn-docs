@@ -9,34 +9,40 @@ tags: ["components"]
 
 ```tsx
 type Props = Partial<FrameProps> & {
-  accessToken: string;
-} & Partial<{
-    style: string;
-    styleUrl: string;
-    longitude: number;
-    latitude: number;
-    zoom: number;
-    pitch: number;
-    bearing: number;
-    markers: Marker[];
-    fitBounds: boolean;
-    minZoom: number;
-    maxZoom: number;
-    padding: number;
-    debug: boolean;
-    onClick: MapEvent;
-    onMouseEnter: MapEvent;
-    onMouseLeave: MapEvent;
-    onStyleLoad: (map: mapboxgl.Map) => void;
-    prepareViewport: (previous: Viewport, next: Viewport) => Viewport;
-    onViewportChange: (viewport: Viewport, markers: mapboxgl.Marker[]) => void;
-    onMarkerClick: MarkerEventHandler;
-    onMarkerMouseEnter: MarkerEventHandler;
-    onMarkerMouseLeave: MarkerEventHandler;
-    onMarkerMouseDown: MarkerEventHandler;
-    onMarkerMouseUp: MarkerEventHandler;
-    onMarkerDragStart: MarkerEventHandler;
-    onMarkerDrag?: MarkerEventHandler;
-    onMarkerDragEnd: MarkerEventHandler;
+    text: string
+    type: string
+    clearable: boolean
+    onResize: (width: number, height: number) => void
+    onClear: () => void
   }>;
+```
+
+A **Chip** is a auto-sizing text often used in [ChipList]("./ChipList")s.
+
+| Prop            | Type       | Notes                                                   |
+| :-------------- | :--------- | :------------------------------------------------------ |
+| **`text`**      | `string`   | The Chip's text.                                        |
+| **`type`**      | `string`   | See _Type_ below.                                       |
+| **`clearable`** | `boolean`  | Whether to display an button to clear the chip.         |
+| **`onClear`**   | `function` | A callback to call when the user taps the clear button. |
+| **`onResize`**  | `function` | A callback to call when the Chip resizes.               |
+
+## Examples
+
+#### Override
+
+```tsx
+// App.tsx
+
+import { Override } from "framer";
+
+// Overrides
+
+export function ChipExample(): Override {
+  return {
+    text: "News",
+    type: "primary",
+    clearable: false
+  };
+}
 ```

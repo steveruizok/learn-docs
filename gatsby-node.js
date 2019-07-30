@@ -1,118 +1,172 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const crypto = require(`crypto`)
+const path = require(`path`)
 
-const path = require('path')
-const { kebabCase } = require('lodash')
-const { uniq } = require('ramda')
+let basePath
+let contentPath
 
-const defaultBuildPath = (page, prefix) => (page > 1 ? `${prefix}/${page}` : `/${prefix}`)
+const DocTemplate = require.resolve('./src/templates/doc')
+const EmptyTemplate = require.resolve(`./src/templates/404`)
 
-const createPaginatedPages = ({
-  edges,
-  createPage,
-  component,
-  limit = 10,
-  prefix = '',
-  buildPath = defaultBuildPath,
-  context = {}
-}) => {
-  edges
-    .map((edge, index) => index % limit === 0 && edges.slice(index, index + limit))
-    .filter(group => group)
-    .forEach((group, index, groups) =>
-      createPage({
-        path: buildPath(index + 1, prefix),
-        component,
-        context: {
-          ...context,
-          group,
-          prefix,
-          page: index + 1,
-          pageTotal: groups.length,
-          itemTotal: edges.length
-        }
-      })
-    )
+const mdxResolverPassthrough = (fieldName) => async (
+	source,
+	args,
+	context,
+	info
+) => {
+	const type = info.schema.getType(`Mdx`)
+	const mdxNode = context.nodeModel.getNodeById({
+		id: source.parent,
+	})
+
+	const resolver = type.getFields()[fieldName].resolve
+	const result = await resolver(mdxNode, args, context, {
+		fieldName,
+	})
+
+	return result
 }
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+exports.onPreBootstrap = (_, themeOptions) => {
+	basePath = themeOptions.basePath || `/`
+	contentPath = themeOptions.contentPath || `content`
+}
 
-  const IndexTemplate = path.resolve('src/templates/IndexTemplate.tsx')
-  const TagTemplate = path.resolve('src/templates/TagTemplate.tsx')
-  const SingleTemplate = path.resolve('src/templates/SingleTemplate.tsx')
+exports.sourceNodes = ({ actions, schema }) => {
+	const { createTypes } = actions
 
-  return graphql(`
-    {
-      allMdx(sort: { order: DESC, fields: [frontmatter___date] }, limit: 2000) {
-        edges {
-          node {
-            id
-            parent {
-              ... on File {
-                name
-                sourceInstanceName
-              }
-            }
-            excerpt(pruneLength: 250)
-            frontmatter {
-              path
-              title
-              date(formatString: "MMMM D, YYYY")
-              tags
-            }
-          }
-        }
-      }
-    }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
+	createTypes(
+		schema.buildObjectType({
+			name: `Docs`,
+			fields: {
+				id: { type: `ID!` },
+				title: { type: `String!` },
+				description: { type: `String` },
+				path: { type: `String!` },
+				slug: { type: `String!` },
+				headings: {
+					type: `[MdxHeadingMdx!]`,
+					resolve: mdxResolverPassthrough(`headings`),
+				},
+				excerpt: {
+					type: `String!`,
+					args: {
+						pruneLength: {
+							type: `Int`,
+							defaultValue: 140,
+						},
+					},
+					resolve: mdxResolverPassthrough(`excerpt`),
+				},
+				body: {
+					type: `String!`,
+					resolve: mdxResolverPassthrough(`body`),
+				},
+			},
+			interfaces: [`Node`],
+		})
+	)
+}
 
-    const edges = result.data.allMdx.edges
+exports.onCreateNode = ({ node, actions, getNode, createNodeId }) => {
+	const { createNode, createParentChildLink, createRedirect } = actions
 
-    // Create single content pages:
-    edges.forEach(({ node }) => {
-      const { frontmatter, parent } = node
-      createPage({
-        edges,
-        path: frontmatter.path || `/${parent.sourceInstanceName}/${parent.name}`,
-        component: SingleTemplate
-      })
-    })
+	const isIndexPath = (name) => name === 'index'
 
-    // Create full content list:
-    createPaginatedPages({
-      edges,
-      createPage,
-      component: IndexTemplate,
-      limit: 10,
-      prefix: 'all'
-    })
+	const toDocsPath = (node) => {
+		const { dir } = path.parse(node.relativePath)
+		const fullPath = [
+			basePath,
+			dir,
+			!isIndexPath(node.name) && node.name,
+		].filter(Boolean)
+		return path.join(...fullPath)
+	}
 
-    // Create content lists by tag:
-    const tags = uniq(
-      edges.reduce((acc, { node }) => [...acc, ...(node.frontmatter.tags || [])], [])
-    )
+	// Make sure it's an MDX node
+	if (node.internal.type !== `Mdx`) {
+		return
+	}
 
-    tags.forEach(tag => {
-      const slug = kebabCase(tag)
+	// Create source field (according to contentPath)
+	const fileNode = getNode(node.parent)
+	const source = fileNode.sourceInstanceName
 
-      createPaginatedPages({
-        edges: edges.filter(({ node }) => (node.frontmatter.tags || []).includes(tag)),
-        createPage,
-        component: TagTemplate,
-        limit: 10,
-        prefix: `tags/${slug}`,
-        context: {
-          slug,
-          tag
-        }
-      })
-    })
-  })
+	if (node.internal.type === `Mdx` && source === contentPath) {
+		const slug = toDocsPath(fileNode)
+
+		const title = node.frontmatter.title
+		const description = node.frontmatter.description
+
+		const fieldData = { title, description, slug }
+
+		console.log(slug)
+
+		createNode({
+			...fieldData,
+			id: createNodeId(`${node.id} >>> Docs`),
+			parent: node.id,
+			children: [],
+			internal: {
+				type: `Docs`,
+				contentDigest: crypto
+					.createHash(`md5`)
+					.update(JSON.stringify(fieldData))
+					.digest(`hex`),
+				content: JSON.stringify(fieldData),
+				description: `Docs`,
+			},
+		})
+
+		createParentChildLink({ parent: fileNode, child: node })
+	}
+}
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+	const { createPage } = actions
+
+	const result = await graphql(`
+		{
+			docs: allDocs {
+				nodes {
+					id
+					slug
+				}
+			}
+		}
+	`)
+
+	if (result.errors) {
+		reporter.panic(result.errors)
+	}
+
+	const docs = result.data.docs.nodes
+
+	docs.forEach((doc, index) => {
+		const previous = index === docs.length - 1 ? null : docs[index + 1]
+		const next = index === 0 ? null : docs[index - 1]
+		const { slug } = doc
+
+		createPage({
+			path: slug,
+			component: DocTemplate,
+			context: {
+				...doc,
+				previous,
+				next,
+			},
+		})
+	})
+
+	createPage({
+		path: `/404/`,
+		component: EmptyTemplate,
+	})
+}
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+	actions.setWebpackConfig({
+		node: {
+			fs: 'empty',
+		},
+	})
 }

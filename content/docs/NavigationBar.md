@@ -25,7 +25,7 @@ mode that sits the title below the bar.
 ### Icon
 
 The `icon` prop can accept either `“none”` (for no icon) or one of the Material
-Design Icon names from the list of [Icon Names](IconNames).
+Design Icon names from the list of [Icon Names](docs/IconNames).
 
 ## Examples
 

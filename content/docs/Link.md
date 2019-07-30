@@ -21,7 +21,7 @@ A **Link** displays either text or an icon. It can be tapped and will run an
 ### Icon
 
 The Link's `icon` prop can accept either `“none”` or one of the Material Design
-Icon names from the list of [Icon Names](IconNames). Setting an icon will hide
+Icon names from the list of [Icon Names](docs/IconNames). Setting an icon will hide
 the Button’s text.
 
 ### Type

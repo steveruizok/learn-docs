@@ -7,8 +7,7 @@ tags: ['components']
 
 Tapping on a **Radio** will turn it on. Radio inputs are normally used as a
 group in order to capture a mutually-exclusive choice, as is done in the
-[RadioGroup](https://framer-learn-docs.netlify.com/content/RadioGroup)
-component.
+[RadioGroup](RadioGroup) component.
 
 | Prop                | Type       | Notes |
 | :------------------ | :--------- | :---- |

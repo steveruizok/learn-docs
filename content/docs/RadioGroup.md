@@ -6,10 +6,8 @@ tags: ['components']
 ---
 
 A **RadioGroup** takes a set of options and turns them into a set of
-[RowItem](https://framer-learn-docs.netlify.com/content/RowItem)s, each of which
-displays the option together with a
-[Radio](https://framer-learn-docs.netlify.com/content/Radio). The RadioGroup’s
-value is the currently selected option.
+[RowItem](docs/RowItem)s, each of which displays the option together with a
+[Radio](docs/Radio). The RadioGroup’s value is the currently selected option.
 
 | Prop                | Type       | Notes                                             |
 | :------------------ | :--------- | :------------------------------------------------ |

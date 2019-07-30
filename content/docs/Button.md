@@ -34,7 +34,7 @@ Button’s `type` prop can accept one of the following types:
 ### Icon
 
 The Button's `icon` prop can accept either `“none”` (for no icon) or one of the
-Material Design Icon names from the list of [Icon Names](IconNames). Setting an
+Material Design Icon names from the list of [Icon Names](docs/IconNames). Setting an
 icon will hide the Button’s text. The default value is `"none"`.
 
 ## Examples

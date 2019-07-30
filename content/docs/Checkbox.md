@@ -14,7 +14,7 @@ Tapping on a **Checkbox** will toggled it between on or off.
 | **`validation`**    | `function` |       |
 | **`onValueChange`** | `function` |       |
 
-See the [Inputs[(docs/Inputs) section for more on how inputs work in Learn.
+See the [Inputs](docs/Inputs) section for more on how inputs work in Learn.
 
 ## Examples
 

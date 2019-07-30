@@ -14,7 +14,7 @@ A Switch allows a user to toggle between two values: `true` and `false`.
 | **`validation`**    | `function` |       |
 | **`onValueChange`** | `function` |       |
 
-See the [Inputs[(docs/Inputs) section for more on how inputs work in Learn.
+See the [Inputs](docs/Inputs) section for more on how inputs work in Learn.
 
 ## Examples
 

@@ -6,8 +6,8 @@ tags: ['components']
 ---
 
 A **CheckboxGroup** takes a set of options and turns them into a set of
-[RowItem[(docs/RowItem)s, each of which displays the option together with a
-[Checkbox[(docs/Checkbox). The CheckboxGroup’s value is an array containing all
+[RowItem](docs/RowItem)s, each of which displays the option together with a
+[Checkbox](docs/Checkbox). The CheckboxGroup’s value is an array containing all
 checked options.
 
 | Prop                | Type       | Notes                                             |

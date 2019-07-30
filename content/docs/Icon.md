@@ -17,7 +17,7 @@ An **Icon** displays a Material Design Icon.
 
 The `icon` prop can accept either `“none”` or one of the Material Design Icon
 names from the list of
-[Icon Names](https://framer-learn-docs.netlify.com/content/IconNames/).
+[Icon Names](IconNames).
 
 ## Examples
 

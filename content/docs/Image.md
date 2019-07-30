@@ -6,7 +6,7 @@ tags: ['components']
 ---
 
 An **Image** shows an image with an optional color overlay. It may also have a
-[Favorite[(docs/Favorite).
+[Favorite](docs/Favorite).
 
 | Prop                   | Type       | Notes                                   |
 | :--------------------- | :--------- | :-------------------------------------- |

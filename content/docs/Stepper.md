@@ -19,7 +19,7 @@ number.
 | **`max`**           | `number`   | The input's maximum value. |
 | **`step`**          | `number`   | The input's step.          |
 
-See the [Inputs[(docs/Inputs) section for more on how inputs work in Learn.
+See the [Inputs](docs/Inputs) section for more on how inputs work in Learn.
 
 ## Examples
 

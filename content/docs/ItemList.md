@@ -15,7 +15,7 @@ An **ItemList** is a scrollable stack of [RowItem]("./RowItem")s.
 ## Items
 
 The `items` prop accepts an array of objects. Each object in the array is the
-props for a [RowItem[(docs/RowItem) instance.
+props for a [RowItem](docs/RowItem) instance.
 
 ## Examples
 

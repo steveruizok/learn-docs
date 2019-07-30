@@ -17,8 +17,8 @@ represented by an icon and an optional title.
 
 ### Tab
 
-The `tabs` prop accepts an array of tabs. A tab may be either an [icon
-name[(docs/IconNames/) or an object with both an `icon` property (an icon name)
+The `tabs` prop accepts an array of tabs. A tab may be either an
+[icon name](IconNames) or an object with both an `icon` property (an icon name)
 and a `text` property (the label). If you're not planning to show titles, an
 array of icon names will be enough; however, if you are planning to show titles,
 you'll likely want to use the object format. If not, then the component will

@@ -17,7 +17,7 @@ type Props = FrameProps & {
 }
 ```
 
-A **ChipList** is a horizontal list of [Chip[(docs/Chip)s.
+A **ChipList** is a horizontal list of [Chip](docs/Chip)s.
 
 | Prop              | Type                     | Notes                                                    |
 | :---------------- | :----------------------- | :------------------------------------------------------- |

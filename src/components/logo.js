@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { colors } from './colors'
+import * as React from "react";
+import { colors } from "./colors";
 
 export const Logo = () => {
-	const flat = false
+	const flat = false;
 
 	return (
 		<svg
@@ -24,7 +24,7 @@ export const Logo = () => {
 				cx={25}
 				cy={25}
 				r={23.5}
-				fill={flat ? 'none' : colors.Light}
+				fill={flat ? "none" : colors.Light}
 				strokeWidth="3"
 				stroke="url(#idsKMxYfO70g124009)"
 			/>
@@ -44,5 +44,5 @@ export const Logo = () => {
 				/>
 			</g>
 		</svg>
-	)
-}
+	);
+};

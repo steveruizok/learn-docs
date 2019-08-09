@@ -1,21 +1,24 @@
 /** @jsx jsx */
-import { useState, useRef } from 'react'
-import { Global } from '@emotion/core'
-import { css } from '@styled-system/css'
-import { Styled, Layout, Main, Container, jsx, useThemeUI } from 'theme-ui'
+import { useState, useRef } from "react";
+import { Global } from "@emotion/core";
+import { css } from "@styled-system/css";
+import { Styled, Layout, Main, Container, jsx, useThemeUI } from "theme-ui";
 
-import Header from './header'
-import Sidenav from './sidenav'
-import Footer from './footer'
+import Header from "./header";
+import Sidenav from "./sidenav";
+import Footer from "./footer";
 
 export default ({ children }) => {
-	const { theme } = useThemeUI()
-	const [menuOpen, setMenuOpen] = useState(false)
-	const nav = useRef(null)
+	const { theme } = useThemeUI();
+	const [menuOpen, setMenuOpen] = useState(false);
+	const nav = useRef(null);
 
 	const bodyStyles = {
-		body: css({ bg: 'background', color: 'text' })(theme),
-	}
+		body: css({
+			bg: "background",
+			color: "text"
+		})(theme)
+	};
 
 	return (
 		<Styled.root>
@@ -26,16 +29,16 @@ export default ({ children }) => {
 					<Container py={0} px={3}>
 						<div
 							sx={{
-								display: [null, 'flex'],
+								display: [null, "flex"],
 								mx: -3,
-								width: '100%',
-								mt: [5, 0],
+								width: "100%",
+								mt: [5, 0]
 							}}
 						>
 							<Sidenav
 								ref={nav}
 								open={menuOpen}
-								sx={{ display: [null, 'block'] }}
+								sx={{ display: [null, "block"] }}
 								onFocus={() => setMenuOpen(true)}
 								onBlur={() => setMenuOpen(false)}
 								onClick={() => setMenuOpen(false)}
@@ -43,9 +46,9 @@ export default ({ children }) => {
 							<div
 								sx={{
 									px: [3, 0],
-									width: '100%',
-									overflow: 'hidden',
-									mb: 2,
+									width: "100%",
+									overflow: "hidden",
+									mb: 2
 								}}
 							>
 								{children}
@@ -56,5 +59,5 @@ export default ({ children }) => {
 				</Main>
 			</Layout>
 		</Styled.root>
-	)
-}
+	);
+};

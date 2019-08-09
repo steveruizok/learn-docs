@@ -99,8 +99,6 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId }) => {
 
 		const fieldData = { title, description, slug }
 
-		console.log(slug)
-
 		createNode({
 			...fieldData,
 			id: createNodeId(`${node.id} >>> Docs`),

@@ -1,43 +1,44 @@
 module.exports = {
 	siteMetadata: {
-		title: 'Docs',
-		description: 'Docs starter',
+		title: "Learn Design System",
+		description:
+			"Documentation for the Learn Design System package for Framer X."
 	},
 	plugins: [
-		'gatsby-plugin-meta-redirect',
-		'gatsby-plugin-theme-ui',
-		'gatsby-plugin-react-helmet',
-		'gatsby-plugin-redirects',
+		"gatsby-plugin-meta-redirect",
+		"gatsby-plugin-theme-ui",
+		"gatsby-plugin-react-helmet",
+		"gatsby-plugin-redirects",
 		{
-			resolve: 'gatsby-plugin-mdx',
+			resolve: "gatsby-plugin-mdx",
 			options: {
-				extensions: ['.md', '.mdx'],
+				extensions: [".md", ".mdx"],
 				gatsbyRemarkPlugins: [
-					'gatsby-remark-prismjs',
-					'remark-slug',
-					'remark-emoji',
-				],
-			},
+					"gatsby-remark-prismjs",
+					"remark-slug",
+					"remark-emoji"
+				]
+			}
 		},
 		{
-			resolve: 'gatsby-source-filesystem',
+			resolve: "gatsby-source-filesystem",
 			options: {
-				path: 'content',
-				name: 'content',
-			},
+				path: "content",
+				name: "content"
+			}
 		},
 		{
-			resolve: 'gatsby-plugin-webfonts',
+			resolve: "gatsby-plugin-webfonts",
 			options: {
 				fonts: {
 					google: [
 						{
-							family: 'Fira Code',
-							variants: ['500', '700'],
-						},
-					],
-				},
-			},
+							family: "Fira Code",
+							variants: ["500", "700"]
+						}
+					]
+				}
+			}
 		},
 		{
 			resolve: `gatsby-plugin-manifest`,
@@ -45,8 +46,8 @@ module.exports = {
 				start_url: `/`,
 				display: `standalone`,
 				icon: `content/assets/icon.png`,
-				include_favicon: true,
-			},
-		},
-	],
-}
+				include_favicon: true
+			}
+		}
+	]
+};

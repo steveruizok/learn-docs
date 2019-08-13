@@ -1,8 +1,8 @@
 ---
-path: "/content/CardList/"
-date: "2019-07-01"
-title: "CardList"
-tags: ["components"]
+path: '/content/CardList/'
+date: '2019-07-01'
+title: 'CardList'
+tags: ['components']
 ---
 
 A **CardList** is a scrollable stack of cards.
@@ -15,7 +15,7 @@ A **CardList** is a scrollable stack of cards.
 ## Cards
 
 The `cards` prop accepts an array of objects. Each object in the array is the
-props for a [Card](Card) instance.
+props for a [Card](docs/Card) instance.
 
 ## Examples
 

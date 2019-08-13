@@ -1,8 +1,8 @@
 ---
-path: "/content/Chip/"
-date: "2019-07-01"
-title: "Chip"
-tags: ["components"]
+path: '/content/Chip/'
+date: '2019-07-01'
+title: 'Chip'
+tags: ['components']
 ---
 
 🚧 👷‍♂️`Under Construction` 👷‍♀️🚧
@@ -17,7 +17,7 @@ type Props = Partial<FrameProps> & {
   }>;
 ```
 
-A **Chip** is a auto-sizing text often used in [ChipList]("content/ChipList)s.
+A **Chip** is a auto-sizing text often used in [ChipList]("docs/ChipList)s.
 
 | Prop            | Type       | Notes                                                   |
 | :-------------- | :--------- | :------------------------------------------------------ |
@@ -34,15 +34,15 @@ A **Chip** is a auto-sizing text often used in [ChipList]("content/ChipList)s.
 ```tsx
 // App.tsx
 
-import { Override } from "framer";
+import { Override } from 'framer'
 
 // Overrides
 
 export function ChipExample(): Override {
-  return {
-    text: "News",
-    type: "primary",
-    clearable: false
-  };
+	return {
+		text: 'News',
+		type: 'primary',
+		clearable: false,
+	}
 }
 ```

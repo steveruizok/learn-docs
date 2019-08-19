@@ -40,7 +40,7 @@ export default ({ children }) => {
 								open={menuOpen}
 								sx={{ display: [null, "block"] }}
 								onFocus={() => setMenuOpen(true)}
-								onBlur={() => setMenuOpen(false)}
+								onBlur={() => setTimeout(() => setMenuOpen(false), 100)}
 								onClick={() => setMenuOpen(false)}
 							/>
 							<div
